@@ -107,4 +107,100 @@ A Uber, por exemplo, estourou o orçamento de IA do ano inteiro em só quatro me
 E o problema nunca foi a IA. Foi a falta de governança: ninguém pôs limite de consumo, ninguém definiu métrica de valor, ninguém auditou o ROI. Porque medir quanto você usa é fácil; o que importa é medir se aquilo gerou resultado.
 
 No fim, governança de IA não é só ética, é controle financeiro. Então me diz: a sua empresa adotou IA, ou só abriu a torneira?` },
+
+  // ===== Conceituais + notícias de IA (jul/2026) =====
+
+  { t: "O que é um agente de IA", p: "Conceito · ~45s", x:
+`Todo mundo fala em agente de IA agora, mas a maioria está descrevendo um chatbot. E não é a mesma coisa.
+
+Um chatbot responde. Você pergunta, ele devolve texto, e para por aí. Um agente age. Você dá um objetivo e ele decide os passos, usa ferramentas, executa, confere o resultado e corrige o rumo sozinho, sem você conduzir cada etapa.
+
+A diferença prática é essa: o chatbot te ajuda a fazer a tarefa; o agente faz a tarefa e te entrega o resultado. É a passagem da IA que fala pra IA que trabalha.
+
+Antes de contratar qualquer agente, pergunte uma coisa: ele só responde, ou ele resolve?` },
+
+  { t: "O que são skills", p: "Conceito · ~45s", x:
+`A pergunta que mais me fazem agora: qual a diferença entre a IA conversar e a IA fazer? A resposta tem um nome. Skill.
+
+Uma skill é uma habilidade específica que você ensina pro modelo. Não é papo, é procedimento. É pegar uma tarefa que a sua operação faz do mesmo jeito toda vez e transformar num passo a passo que a IA executa sob demanda, sozinha.
+
+E o pulo do gato é que a skill só carrega quando é preciso. A IA não fica com mil instruções na cabeça o tempo todo; ela puxa a habilidade certa na hora certa.
+
+É a diferença entre um assistente que sabe tudo mal e um especialista que faz uma coisa muito bem. Skill não é a IA sabendo mais. É a IA sabendo fazer.` },
+
+  { t: "Por que a IA alucina — e como o RAG resolve", p: "Conceito · ~48s", x:
+`Se a IA já te deu uma resposta errada com a maior confiança, você viu uma alucinação. E quase sempre a causa é uma só: ela respondeu de memória, sem os seus dados na frente.
+
+O modelo é treinado num apanhado gigante da internet até certa data. Ele não conhece o seu processo, o seu cliente, o seu número de ontem. Quando você pergunta sobre isso, ele preenche a lacuna com o que soa provável. E às vezes inventa.
+
+A técnica que resolve tem um nome: RAG. Antes de responder, a IA busca a informação certa na sua base e responde ancorada naquilo, não no chute.
+
+A regra é simples: IA sem o seu contexto não é inteligente, é confiante. E confiança sem fonte é o jeito mais caro de errar.` },
+
+  { t: "Automação vs Agente", p: "Conceito · ~48s", x:
+`Automação e agente parecem a mesma coisa, e não são. Confundir os dois faz você construir a ferramenta errada.
+
+Automação é um trilho. Se acontece A, faça B. É previsível, é barato, é ótimo pra tarefa que sempre segue o mesmo caminho. O problema é que a vida real tem exceção, e o trilho não sabe o que fazer quando o caso foge do script.
+
+O agente é diferente. Ele lida com o que não estava previsto: recebe o objetivo, avalia a situação e decide o caminho na hora.
+
+A escolha certa não é qual é mais moderno. É: a tarefa sempre segue o mesmo trilho, ou ela precisa de julgamento? Trilho, automatiza. Julgamento, agente. Usar agente onde bastava automação é pagar caro por uma decisão que ninguém precisava tomar.` },
+
+  { t: "Janela de contexto: por que 1 milhão de tokens importa", p: "Conceito · ~48s", x:
+`Saiu uma notícia técnica que parece detalhe de nerd, mas muda o que dá pra fazer com IA na prática: os modelos novos leem um milhão de tokens de uma vez.
+
+Traduzindo, é a memória de trabalho da IA numa única conversa. Quanto ela consegue segurar na cabeça ao mesmo tempo. Um milhão de tokens é mais ou menos setecentas mil palavras. É o processo inteiro, o contrato inteiro, meses de histórico, tudo aberto na frente dela ao mesmo tempo.
+
+Antes você tinha que picar o documento em pedacinhos, e a IA perdia o fio. Agora ela vê o todo.
+
+Pra quem opera, isso é a diferença entre uma IA que responde sobre um trecho e uma que entende o caso inteiro. Contexto não é enfeite. É o que separa resposta genérica de resposta que serve.` },
+
+  { t: "MCP: a IA deixa de ser uma ilha", p: "Conceito · ~48s", x:
+`Durante muito tempo a IA foi uma ilha. Ela era inteligente, mas não conseguia tocar em nada: não abria o seu sistema, não puxava o seu dado, não executava nada no mundo real. Você era o cabo entre a IA e as ferramentas, copiando e colando o dia inteiro.
+
+O que mudou isso tem um nome técnico, MCP, mas a ideia é simples. É uma tomada padrão que conecta a IA às suas ferramentas.
+
+Com ela, a IA para de só falar sobre o trabalho e passa a fazer o trabalho: consultar, preencher, disparar, dentro dos sistemas que você já usa.
+
+É a diferença entre um consultor que te dá conselho e um que senta e opera. E é aí que a IA deixa de ser demonstração e vira operação.` },
+
+  { t: "Fable 5: a régua do que dá pra delegar subiu", p: "Notícia · ~50s", x:
+`Em junho a Anthropic lançou o Claude Fable 5, o modelo mais capaz que eles já disponibilizaram pro público. Estado da arte em praticamente todos os testes: engenharia, análise, pesquisa, visão.
+
+E tem um detalhe que me interessa mais que o benchmark. Quanto mais longa e complexa a tarefa, maior a vantagem dele. Ou seja, o ganho não está em responder pergunta solta. Está em aguentar trabalho de verdade, do começo ao fim, sem se perder no meio.
+
+Pra quem opera, é isso que importa: a régua do que dá pra delegar acabou de subir de novo. Tarefa que ano passado exigia gente do início ao fim, hoje cabe numa alça de IA com supervisão.
+
+A pergunta não é mais se a IA consegue. É o que ainda faz sentido eu fazer na mão.` },
+
+  { t: "Sonnet 5: a IA de ponta ficou barata", p: "Notícia · ~50s", x:
+`A notícia que mais interessa pra quem toca operação não foi o modelo mais potente. Foi o mais barato.
+
+No fim de junho a Anthropic lançou o Claude Sonnet 5, feito pra rodar agente: planejar, usar ferramenta, trabalhar sozinho por um bom tempo. E o pulo do gato é o preço. Ele entrega qualidade perto do modelo de topo por uma fração do custo.
+
+Por que isso muda o jogo? Porque agente bom era caro demais pra rodar o dia inteiro na operação. Ficava na demonstração. Quando a inteligência de ponta fica barata, ela sai do slide e entra no processo: roda em escala, todo dia, sem estourar o orçamento.
+
+Foi sempre assim com tecnologia. A virada não acontece quando fica possível. Acontece quando fica barato.` },
+
+  { t: "40% adotam, 40% cancelam (Gartner)", p: "Notícia · ~50s", x:
+`Dois números da Gartner que todo gestor devia ter na parede.
+
+O primeiro: até o fim de 2026, quatro em cada dez aplicativos corporativos vão ter algum agente de IA embutido. Ano passado era menos de um em vinte. A adoção não está chegando. Ela chegou.
+
+O segundo número, o que ninguém posta: a Gartner também projeta que mais de quarenta por cento dos projetos de agente vão ser cancelados até 2027.
+
+Leia os dois juntos. Todo mundo vai adotar, e quase metade vai fracassar. E a diferença entre os dois grupos não vai ser quem tem a melhor ferramenta. Vai ser quem tinha processo antes de automatizar, e governança pra medir se aquilo gerou valor.
+
+A onda é real. Surfar ou tomar caldo é escolha de método, não de tecnologia.` },
+
+  { t: "A IA que sabe recuar", p: "Notícia · ~48s", x:
+`Um detalhe do lançamento do modelo mais avançado da Anthropic me chamou mais atenção que a potência dele.
+
+Em temas de risco alto, como segurança cibernética, área biológica e química, o modelo não responde. Ele recusa e passa a tarefa pra um modelo anterior, mais contido.
+
+Pensa no que isso significa. O sistema mais capaz foi desenhado pra saber quando não usar toda a capacidade. Isso é governança virando parte do produto, não um adendo.
+
+E é exatamente o que falta na maioria das empresas correndo pra adotar IA: elas ligam a potência e esquecem o freio.
+
+A lição não é técnica, é de gestão. Poder sem limite não é vantagem. Vantagem é saber, na hora certa, recuar.` },
 ];
