@@ -67,6 +67,10 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 #fatal{position:fixed;inset:0;z-index:20;background:#04100f;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:30px;text-align:center;}
 #fatal h3{font-size:20px;font-weight:900;color:var(--gold-lt);}
 #fatal p{font-size:15px;color:#c7d3d2;line-height:1.5;max-width:340px;}
+.micbar{display:none;align-items:center;gap:9px;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px 13px;}
+.micbar b{font-size:15px;}
+#micSel{flex:1;min-width:0;background:transparent;border:none;color:#fff;font-family:var(--font);font-size:13px;font-weight:700;outline:none;-webkit-appearance:none;appearance:none;text-overflow:ellipsis;}
+#micSel option{color:#111;}
 .hidden{display:none!important;}
 </style>
 </head>
@@ -82,6 +86,7 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 </div>
 
 <div class="dock" id="dock">
+  <div class="micbar"><b>🎤</b><select id="micSel" aria-label="microfone"></select></div>
   <div class="sliders">
     <div class="sl"><label>Velocidade <span id="spdV">40</span></label><input id="spd" type="range" min="0" max="120" value="40"></div>
     <div class="sl"><label>Fonte <span id="fntV">34</span></label><input id="fnt" type="range" min="22" max="64" value="34"></div>
@@ -134,18 +139,23 @@ let stream, rec, chunks=[], scrolling=false, recording=false, t0=0, tint=null, b
 const LS='tp_script_v1';
 
 // ---- câmera ----
-async function initCam(){
+async function initCam(micId){
   try{
+    if(stream){ stream.getTracks().forEach(t=>t.stop()); }   // fecha o stream anterior antes de reabrir
+    const audio={echoCancellation:false, noiseSuppression:false, autoGainControl:false, sampleRate:48000};
+    if(micId) audio.deviceId={exact:micId};                   // força o microfone escolhido (ex: lapela)
     stream = await navigator.mediaDevices.getUserMedia({
       video:{facingMode:'user', width:{ideal:1920}, height:{ideal:1080}, frameRate:{ideal:30}},
-      audio:{echoCancellation:false, noiseSuppression:false, autoGainControl:false, sampleRate:48000}
+      audio
     });
     cam.srcObject=stream;
     const s=stream.getVideoTracks()[0].getSettings();
     const h=Math.min(s.width||0,s.height||0);            // menor lado = "linhas" no vertical
     resLabel = h?`${h}p`:'—';
     $('#res').textContent = resLabel + (s.frameRate?` · ${Math.round(s.frameRate)}fps`:'');
+    listMics();                                          // atualiza a lista (labels só vêm após permissão)
   }catch(e){
+    if(micId){ curMic=''; localStorage.removeItem('tp_mic'); return initCam(); }  // mic sumiu → volta pro padrão
     const secure=window.isSecureContext;
     fatal('Câmera bloqueada', secure
       ? 'Toque no cadeado do navegador, permita Câmera e Microfone e recarregue.'
@@ -153,6 +163,23 @@ async function initCam(){
   }
 }
 function fatal(t,p){ $('#fatalT').textContent=t; $('#fatalP').textContent=p; $('#fatal').style.display='flex'; }
+
+// ---- seletor de microfone ----
+const micSel=$('#micSel');
+let curMic = localStorage.getItem('tp_mic')||'';
+async function listMics(){
+  if(!(navigator.mediaDevices&&navigator.mediaDevices.enumerateDevices)) return;
+  try{
+    const mics=(await navigator.mediaDevices.enumerateDevices()).filter(d=>d.kind==='audioinput');
+    micSel.innerHTML='';
+    mics.forEach((m,i)=>{ const o=document.createElement('option'); o.value=m.deviceId; o.textContent=m.label||('Microfone '+(i+1)); micSel.appendChild(o); });
+    const active=(stream&&stream.getAudioTracks()[0])?stream.getAudioTracks()[0].getSettings().deviceId:'';
+    const pref=mics.some(m=>m.deviceId===curMic)?curMic:active;
+    if(pref) micSel.value=pref;
+    micSel.parentElement.style.display = mics.length>1 ? 'flex' : 'none';  // só mostra se houver escolha
+  }catch(e){}
+}
+micSel.onchange=async()=>{ if(recording) return; curMic=micSel.value; localStorage.setItem('tp_mic',curMic); await initCam(curMic); };
 
 // ---- prompter ----
 function loop(){ if(scrolling){ promptEl.scrollTop += (+$('#spd').value)/60;
@@ -189,7 +216,7 @@ function fmt(s){ return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60
 async function countdown(){ const el=$('#count'),b=el.querySelector('b'); for(let i=3;i>=1;i--){ b.textContent=i; el.style.display='flex'; await new Promise(r=>setTimeout(r,750)); } el.style.display='none'; }
 async function startRec(){
   if(!stream) return; const mime=pickMime(); await countdown(); chunks=[];
-  try{ rec = mime? new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:10_000_000,audioBitsPerSecond:128000}) : new MediaRecorder(stream); }
+  try{ rec = mime? new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:10_000_000,audioBitsPerSecond:192000}) : new MediaRecorder(stream); }
   catch(e){ rec=new MediaRecorder(stream); }
   rec.ondataavailable=e=>{ if(e.data.size) chunks.push(e.data); };
   rec.onstop=finishRec; rec.start();
@@ -219,7 +246,7 @@ $('#share').onclick=async()=>{
 };
 
 // ---- init ----
-textEl.style.fontSize='34px'; loop(); initCam();
+textEl.style.fontSize='34px'; loop(); initCam(curMic);
 if(!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia)) fatal('Sem suporte','Use o Google Chrome atualizado no Android.');
 if(!HAS_ROTEIROS){ $('#menu').classList.add('hidden'); openPaste(); }  // versão limpa (sem roteiros.js): abre direto no editor
 </script>
