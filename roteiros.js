@@ -165,33 +165,35 @@ Com ela, a IA para de só falar sobre o trabalho e passa a fazer o trabalho: con
 É a diferença entre um consultor que te dá conselho e um que senta e opera. E é aí que a IA deixa de ser demonstração e vira operação.` },
 
   { t: "Fable 5: a régua do que dá pra delegar subiu", p: "Notícia · ~50s", x:
-`Em junho a Anthropic lançou o Claude Fable 5, o modelo mais capaz que eles já disponibilizaram pro público. Estado da arte em praticamente todos os testes: engenharia, análise, pesquisa, visão.
+`Essa semana a Anthropic lançou o Claude Fable 5, o modelo mais capaz que eles já disponibilizaram pro público. Melhor em praticamente todos os testes: engenharia, análise, pesquisa, visão.
 
-E tem um detalhe que me interessa mais que o benchmark. Quanto mais longa e complexa a tarefa, maior a vantagem dele. Ou seja, o ganho não está em responder pergunta solta. Está em aguentar trabalho de verdade, do começo ao fim, sem se perder no meio.
+E tem um detalhe que interessa mais que o benchmark. Quanto mais longa e complexa a tarefa, maior a vantagem dele. Ou seja, o ganho não está em responder pergunta solta. Está em aguentar trabalho de verdade, do começo ao fim, sem se perder no meio.
 
-Pra quem opera, é isso que importa: a régua do que dá pra delegar acabou de subir de novo. Tarefa que ano passado exigia gente do início ao fim, hoje cabe numa alça de IA com supervisão.
+Pra quem opera, é isso que importa: a régua do que dá pra delegar acabou de subir de novo. Tarefa que ano passado exigia uma pessoa do início ao fim, hoje cabe numa sessão de IA com supervisão.
 
-A pergunta não é mais se a IA consegue. É o que ainda faz sentido eu fazer na mão.` },
+A pergunta não é mais se a IA consegue fazer. É o que ainda faz sentido que a gente faça.` },
 
   { t: "Sonnet 5: a IA de ponta ficou barata", p: "Notícia · ~50s", x:
-`A notícia que mais interessa pra quem toca operação não foi o modelo mais potente. Foi o mais barato.
+`A notícia que mais interessa pra quem toca operação no dia a dia não foi o modelo mais potente. Foi o mais barato.
 
-No fim de junho a Anthropic lançou o Claude Sonnet 5, feito pra rodar agente: planejar, usar ferramenta, trabalhar sozinho por um bom tempo. E o pulo do gato é o preço. Ele entrega qualidade perto do modelo de topo por uma fração do custo.
+No fim do mês passado a Anthropic lançou o Claude Sonnet 5, feito pra rodar agente: planejar, usar ferramenta, trabalhar sozinho por um bom tempo. E o pulo do gato é o preço. Ele entrega qualidade perto do modelo de topo por uma fração do custo.
 
 Por que isso muda o jogo? Porque agente bom era caro demais pra rodar o dia inteiro na operação. Ficava na demonstração. Quando a inteligência de ponta fica barata, ela sai do slide e entra no processo: roda em escala, todo dia, sem estourar o orçamento.
 
 Foi sempre assim com tecnologia. A virada não acontece quando fica possível. Acontece quando fica barato.` },
 
   { t: "40% adotam, 40% cancelam (Gartner)", p: "Notícia · ~50s", x:
-`Dois números da Gartner que todo gestor devia ter na parede.
+`Tem dois dados sobre Inteligência Artificial que todo gestor deveria colar na parede do escritório.
 
-O primeiro: até o fim de 2026, quatro em cada dez aplicativos corporativos vão ter algum agente de IA embutido. Ano passado era menos de um em vinte. A adoção não está chegando. Ela chegou.
+O primeiro: até o fim do ano, 4 em cada 10 ferramentas de trabalho que a gente usa vão ter IA embutida. A onda não está vindo. Ela já chegou.
 
-O segundo número, o que ninguém posta: a Gartner também projeta que mais de quarenta por cento dos projetos de agente vão ser cancelados até 2027.
+O segundo dado é aquele que ninguém posta no Instagram: as maiores pesquisas de mercado projetam que mais de 40% dos projetos de IA nas empresas vão fracassar e ser cancelados.
 
-Leia os dois juntos. Todo mundo vai adotar, e quase metade vai fracassar. E a diferença entre os dois grupos não vai ser quem tem a melhor ferramenta. Vai ser quem tinha processo antes de automatizar, e governança pra medir se aquilo gerou valor.
+Agora leia os dois juntos: o mercado inteiro vai tentar usar, e quase metade vai jogar dinheiro fora.
 
-A onda é real. Surfar ou tomar caldo é escolha de método, não de tecnologia.` },
+A diferença entre quem tem sucesso e quem fracassa não vai ser quem comprou a melhor ferramenta. Vai ser quem arrumou a casa e criou processos antes de automatizar.
+
+A onda da IA é real. Mas surfar ou tomar caldo é uma escolha de método, não de tecnologia.` },
 
   { t: "A IA que sabe recuar", p: "Notícia · ~48s", x:
 `Um detalhe do lançamento do modelo mais avançado da Anthropic me chamou mais atenção que a potência dele.
