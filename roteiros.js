@@ -26,16 +26,14 @@ O trabalho de quem lidera não é ser o gênio. É construir o sistema que dispe
 
 Você está dependendo de sistemas, ou de heróis?` },
 
-  { t: "Legal Ops não é a TI do jurídico", p: "▶ 3 · Pilar 2 · ~50s", x:
-`Tem uma confusão que atrasa muito escritório: achar que Legal Ops é a TI do jurídico. Não é.
+  { t: "O erro de automatizar 100%", p: "▶ 3 · Pilar 1 · ~50s", x:
+`Automatizar cem por cento de um processo é quase sempre um erro. E parece o oposto do que eu deveria dizer.
 
-TI cuida de a máquina funcionar. Legal Ops cuida de o trabalho fluir. É olhar pra operação inteira e perguntar: onde trava, o que dá pra padronizar, o que dá pra medir, o que dá pra tirar do caminho do advogado.
+O ganho de automação não é linear. Os primeiros oitenta por cento são baratos e diretos: tarefa repetitiva, regra clara, a máquina faz. Os últimos vinte por cento são as exceções, os casos estranhos, o julgamento — e ali você gasta o dobro do esforço pra automatizar metade tão bem.
 
-A ferramenta é uma consequência disso, não o ponto de partida.
+Então eu paro antes. Deixo a máquina fazer o volume e o humano cuidar da exceção e da conferência. Não é preguiça, é economia: a última milha custa mais do que vale.
 
-Quem trata Legal Ops como suporte técnico resolve o sintoma e ignora a causa.
-
-Não é sobre a tecnologia. É sobre como o trabalho acontece.` },
+Automação madura não é a que dispensa o humano. É a que sabe exatamente onde ele ainda precisa entrar.` },
 
   { t: "Auditável vale mais que infalível", p: "▶ 4 · Pilar 4 · ~48s", x:
 `Todo mundo quer uma IA que não erra. Eu prefiro uma IA que deixa rastro.
