@@ -205,4 +205,44 @@ Pensa no que isso significa. O sistema mais capaz foi desenhado pra saber quando
 E é exatamente o que falta na maioria das empresas correndo pra adotar IA: elas ligam a potência e esquecem o freio.
 
 A lição não é técnica, é de gestão. Poder sem limite não é vantagem. Vantagem é saber, na hora certa, recuar.` },
+
+  // ===== IG · Stories / Reels curtos (add 07/07/2026) — mais leves e punchy pro alcance do Instagram =====
+
+  { t: "O gargalo é você", p: "IG · Story ~20s", x:
+`Tem uma verdade incômoda sobre operação: às vezes o gargalo é você.
+
+Se toda decisão passa por você, você não é o líder do processo — é o pedágio dele. O time trava esperando seu aval, e você vira o teto do que a operação entrega.
+
+Delegar não é perder controle. É parar de ser o funil.
+
+Onde a sua operação para quando você tira uma semana de férias? É ali que você precisa agir primeiro.` },
+
+  { t: "A pergunta que corta metade das tarefas", p: "IG · Story ~20s", x:
+`Antes de automatizar qualquer coisa, eu faço uma pergunta meio incômoda: e se a gente simplesmente parasse de fazer isso?
+
+Metade das tarefas que a gente chama de essencial só existe por hábito. Relatório que ninguém lê. Aprovação que nunca reprova nada.
+
+Automatizar isso é deixar o inútil mais rápido. Antes de acelerar, corta.
+
+Qual tarefa da sua semana sumiria sem ninguém sentir falta?` },
+
+  { t: "Automatizou e ninguém usou?", p: "IG · Story ~25s", x:
+`Você montou a automação perfeita e ninguém usa? Já passei por isso — e a culpa não é da ferramenta.
+
+A tecnologia é a parte fácil. Adoção é a difícil.
+
+Antes de construir, eu vou atrás de uma pessoa só: o cético mais respeitado do time. Resolvo um problema real dele e deixo ele achar o defeito. Quando ele vira, o resto segue.
+
+Adoção não se anuncia. Se constrói, uma pessoa de cada vez.` },
+
+  { t: "3 sinais de que você automatizou a coisa errada", p: "IG · Story ~25s", x:
+`Três sinais de que você automatizou a coisa errada.
+
+Um: ficou mais rápido, mas a fila não diminuiu. Você só trocou o gargalo de lugar.
+
+Dois: ninguém usa, e todo mundo voltou pro jeito antigo.
+
+Três: você não consegue dizer o que melhorou — só que "economizou tempo". E tempo que ninguém mede é brinquedo caro.
+
+Automação boa mexe em fila, erro ou realocação. O resto é enfeite.` },
 ];
