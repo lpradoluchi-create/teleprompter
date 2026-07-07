@@ -245,4 +245,106 @@ Dois: ninguém usa, e todo mundo voltou pro jeito antigo.
 Três: você não consegue dizer o que melhorou — só que "economizou tempo". E tempo que ninguém mede é brinquedo caro.
 
 Automação boa mexe em fila, erro ou realocação. O resto é enfeite.` },
+
+  // ===== LinkedIn + Reels — vídeos (add 07/07/2026, leva 2) =====
+
+  { t: "Sistemas > Gênios", p: "Pilar 2 · ~50s", x:
+`Todo mundo quer contratar o gênio. Eu prefiro construir o sistema.
+
+O gênio resolve o problema de hoje, e leva a solução embora quando tira férias ou pede demissão. O sistema resolve o problema de novo amanhã, com qualquer pessoa executando.
+
+Se a sua operação só funciona porque uma pessoa específica é excepcional, você não tem um processo. Tem um ponto único de falha muito talentoso.
+
+O trabalho de quem lidera não é ser o gênio. É construir o sistema que dispensa o gênio.
+
+Você está dependendo de sistemas, ou de heróis?` },
+
+  { t: "A ordem é inegociável: Simplificar, Padronizar, Automatizar", p: "Pilar 1 · ~50s", x:
+`Simplificar, padronizar, automatizar. Nessa ordem. E a ordem não é enfeite: é a diferença entre dar certo e dar errado.
+
+Quase todo mundo pula direto pra automatizar, porque é a parte que brilha. Aí automatiza um processo confuso e ganha uma confusão mais rápida — e mais cara.
+
+Antes de automatizar, eu elimino o que não precisa existir. Depois transformo o que sobra em regra clara. Só então entrego pra máquina.
+
+Pular etapa parece mais rápido. É o caminho mais caro pro prejuízo.
+
+Você está automatizando, ou congelando a bagunça em código?` },
+
+  { t: "A ferramenta não conserta o processo", p: "Pilar 1 · ~48s", x:
+`A ferramenta nova não vai consertar o seu processo. Esse é um dos erros mais caros que eu vejo.
+
+A empresa sente uma dor, compra um software e espera que ele arrume a bagunça sozinho. Só que tecnologia boa em cima de processo ruim não conserta nada. Só acelera o problema.
+
+Se o que fazer já era confuso na mão, vai continuar confuso — agora automático e com mensalidade.
+
+A pergunta certa antes de comprar não é "essa ferramenta é boa?". É "o meu processo está pronto pra receber ela?".
+
+Ferramenta é a parte fácil. Desenho é o trabalho.` },
+
+  { t: "Legal Ops não é a TI do jurídico", p: "Pilar 2 · ~50s", x:
+`Tem uma confusão que atrasa muito escritório: achar que Legal Ops é a TI do jurídico. Não é.
+
+TI cuida de a máquina funcionar. Legal Ops cuida de o trabalho fluir. É olhar pra operação inteira e perguntar: onde trava, o que dá pra padronizar, o que dá pra medir, o que dá pra tirar do caminho do advogado.
+
+A ferramenta é uma consequência disso, não o ponto de partida.
+
+Quem trata Legal Ops como suporte técnico resolve o sintoma e ignora a causa.
+
+Não é sobre a tecnologia. É sobre como o trabalho acontece.` },
+
+  { t: "Auditável vale mais que infalível", p: "Pilar 4 · ~48s", x:
+`Todo mundo quer uma IA que não erra. Eu prefiro uma IA que deixa rastro.
+
+Numa operação de verdade, o que te protege não é a máquina ser perfeita. É você conseguir mostrar como ela chegou naquele resultado: onde entrou, o que um humano conferiu, onde terminou a máquina e começou a sua decisão.
+
+Perfeição ninguém garante. Rastreabilidade, sim.
+
+E quando alguém perguntar "como isso foi decidido?", a diferença entre quem responde e quem gagueja não é quem usou a melhor IA. É quem registrou.
+
+Auditável vale mais que infalível.` },
+
+  // ===== IG · Stories / Reels curtos (add 07/07/2026, leva 2) =====
+
+  { t: "Você não tem processo, tem a Fulana", p: "IG · Story ~22s", x:
+`Teste rápido: se a tarefa só sai certa quando a Fulana faz, você não tem um processo. Tem uma dependência.
+
+E a Fulana tira férias, adoece, um dia vai embora.
+
+Processo é quando alguém novo consegue executar lendo uma página, sem perguntar pra ninguém. Se depende da memória de uma pessoa, é sorte, não sistema.
+
+O seu processo-chave está no papel, ou na cabeça de alguém?` },
+
+  { t: "Comprou, anunciou, ninguém usou", p: "IG · Story ~22s", x:
+`A cena se repete em todo escritório: compra a ferramenta, anuncia no grupo, espera o salto de produtividade.
+
+Três meses depois, ninguém usa. E a culpa cai na ferramenta.
+
+Quase nunca é a ferramenta. É que ninguém conduziu a mudança. Adoção não se decreta no grupo do WhatsApp — se constrói, uma pessoa de cada vez.
+
+Qual foi a última ferramenta que entrou e morreu na praia?` },
+
+  { t: "O relatório que ninguém lê", p: "IG · Story ~20s", x:
+`Aposto que tem um relatório na sua operação que alguém monta toda semana e ninguém lê. Uma aprovação que nunca reprovou nada. Uma conferência do que já veio conferido.
+
+A gente chama tudo isso de essencial. Mas metade só existe por hábito.
+
+Antes de automatizar ou acelerar qualquer coisa, a pergunta é: e se a gente simplesmente parasse? Corta primeiro. Acelera depois.` },
+
+  { t: "É gente que falta, ou é desenho?", p: "IG · Story ~22s", x:
+`Operação apertou e o instinto é um só: contratar. Mas antes de abrir a vaga, uma pergunta.
+
+O gargalo é de gente, ou de desenho?
+
+Porque colocar mais gente num processo manual quebrado é escalar o problema junto com a solução. Mais gente, mais ponto de falha.
+
+Headcount é a resposta mais cara e mais lenta pra um problema que quase sempre é de processo.` },
+
+  { t: "A IA não te demite", p: "IG · Story ~22s", x:
+`A IA não vai chegar te demitindo. O que ela faz, no silêncio, é mudar o que faz sentido uma pessoa fazer.
+
+Então o risco não é ser trocado por uma máquina. É ser trocado por alguém que aprendeu a dirigir a máquina.
+
+A pergunta não é se a IA vai tirar o seu emprego. É se você vai ser quem manda nela — ou quem disputa espaço com ela.
+
+E isso é uma escolha que dá pra fazer hoje.` },
 ];
