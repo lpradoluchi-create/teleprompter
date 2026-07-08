@@ -254,16 +254,16 @@ Mas o número que eu mais gosto é outro. Quando ele encontra um caso que não d
 
 O que protege a operação nunca foi a máquina ser perfeita. É ela saber onde não confiar em si mesma. E te deixar conferir cada passo.` },
 
-  { t: "PROVA · 100 protocolos por mês, 4 pessoas", p: "▶ P5 · Prova (Sistemas>Gênios) · ~50s", x:
-`Cem protocolos por mês, com quatro pessoas. Esse número é a minha tese inteira num só lugar.
+  { t: "PROVA · O custo de produzir a peça: centavos", p: "▶ P5 · Prova (custo marginal) · ~50s", x:
+`A petição que a minha esteira produz custa centavos. Não é força de expressão — é o custo real de máquina de cada peça a mais.
 
-E não é porque as quatro são gênias. É porque a parte repetitiva não depende delas. Qualificar o lead, coletar documento, calcular, redigir a peça, avisar o cliente — isso roda em sistema. A pessoa entra onde precisa de julgamento: a exceção, a decisão, a conferência.
+A peça nasce dos documentos reais do caso, com o cálculo embutido, a jurisprudência verificada contra um banco curado e a formatação do escritório. E o humano entra no fim: revisa e protocola.
 
-Quando você tira o trabalho braçal do humano e deixa ele só na decisão, um time pequeno entrega o volume de um time grande.
+O que isso muda? O gargalo deixa de ser a redação e passa a ser só a revisão. A produção cresce sem a folha crescer junto.
 
-Eu não contratei mais gente pra crescer. Construí o sistema que dispensa precisar dela pra parte que a máquina faz melhor.
+E aqui está a parte que quase ninguém enxerga: quando o custo de produzir cai pra perto de zero, o limite da operação para de ser "quantas peças a gente dá conta de escrever" e vira "quantas a gente consegue revisar com qualidade".
 
-Escala não é sobre quantas mãos você tem. É sobre quanto do trabalho não precisa de mão nenhuma.` },
+O trabalho não some. Ele sobe de nível — do braço pra cabeça.` },
 
   // ===================== [2] STORIES (IG) — grava em bloco =====================
 
