@@ -265,6 +265,61 @@ E aqui está a parte que quase ninguém enxerga: quando o custo de produzir cai 
 
 O trabalho não some. Ele sobe de nível — do braço pra cabeça.` },
 
+  { t: "PROVA · O atendimento que responde falando", p: "▶ P6 · Prova (voz/UX) · ~48s", x:
+`O meu atendimento não digita. Ele fala.
+
+A maioria dos chatbots te obriga a ler um menu e escolher a opção três. O meu faz o contrário: escuta o áudio que a pessoa manda — do jeito que ela fala, corrido, com "é… deixa eu ver" — e responde em áudio, com voz neural. Não aquela voz de robô de operadora.
+
+Parece detalhe estético. Não é. No WhatsApp, a maior parte das pessoas manda áudio. Obrigar a digitar num menuzinho é atrito puro — e atrito derruba conversa.
+
+Quando a IA encontra a pessoa no canal dela e no formato dela, a qualificação acontece sem parecer interrogatório. Vira conversa.
+
+Tecnologia boa não força a pessoa a se adaptar a ela. Ela se adapta à pessoa. O resto é a empresa terceirizando o próprio trabalho pro cliente.` },
+
+  { t: "PROVA · O cliente nunca pergunta 'cadê meu processo'", p: "▶ P7 · Prova (suporte proativo) · ~52s", x:
+`Eu construí uma esteira inteira com um objetivo só: o cliente nunca precisar perguntar "e o meu processo?".
+
+Cada marco vira mensagem automática, na hora certa: protocolo, perícia, sentença, precatório. No protocolo, a pessoa recebe o número do processo, um vídeo com o nome dela e o link de consulta do tribunal certo — são trinta e três tribunais mapeados, mais o Meu INSS, com o CPF conferido dígito por dígito pra nunca avisar a pessoa errada.
+
+Demorei pra entender uma coisa: a pergunta "cadê meu processo" quase nunca é sobre informação. É sobre ansiedade. E toda vez que o cliente precisa perguntar, a relação já falhou um pouquinho antes.
+
+Suporte bom não é o que responde rápido. É o que chega antes da pergunta.
+
+A maioria das operações mede quão rápido responde. Eu prefiro medir quantas perguntas deixaram de existir.` },
+
+  { t: "PROVA · Na dúvida, não dispara", p: "▶ P8 · Prova (guardrail) · ~50s", x:
+`A regra mais importante do meu sistema de avisos não é sobre quando ele fala. É sobre quando ele fica calado.
+
+Um exemplo: o aviso de trânsito em julgado, aquele "acabou, ganhamos", só sai se a decisão foi mesmo favorável — o sistema confere na base antes de mandar. Se tem qualquer ambiguidade, ele não dispara. Trava e chama um humano.
+
+Parece pouco. É o que separa produção de demonstração.
+
+Porque uma mensagem errada pro cliente — um "parabéns, você ganhou" num caso que na verdade perdeu — custa muito mais caro que dez avisos que não saíram. O silêncio é reversível. A mensagem errada, não.
+
+Automação madura não é a que fala mais. É a que sabe a hora de calar. "Na dúvida, não dispara" devia estar escrito na parede de todo projeto de IA.` },
+
+  { t: "PROVA · A cobrança que se cancela sozinha", p: "▶ P9 · Prova (automação que termina) · ~50s", x:
+`A automação que eu mais tenho orgulho é uma que se desliga sozinha.
+
+Quando o juiz manda emendar o processo, a IA lê o despacho e separa só o que é obrigação do cliente entregar — ela tem uma lista do que é ônus do escritório e isso ela nunca cobra da pessoa. Aí ela pede o documento e agenda dois lembretes.
+
+Mas o pulo do gato é o fim: no instante em que o documento chega, ela cancela os lembretes automaticamente. Ninguém fica cobrando quem já entregou.
+
+Porque metade da raiva que as pessoas têm de robô vem exatamente disso: continuar cobrando depois que você já fez. O difícil na automação nunca foi ligar. Foi desligar na hora certa.
+
+Automação madura sabe terminar. A que só sabe começar vira spam com o seu nome.` },
+
+  { t: "PROVA · A IA que sabe que o prazo não é seu", p: "▶ P10 · Prova (acertar o 'não') · ~50s", x:
+`Eu ensinei uma IA a reconhecer um prazo que não é meu. E essa função vale mais que qualquer prazo que ela captura.
+
+Ela lê as publicações dos tribunais e transforma cada intimação em tarefa com prazo calculado. Útil. Mas a parte que me deixa tranquilo é outra: ela detecta quando a intimação é dirigida à parte contrária — e aí NÃO cria prazo nenhum.
+
+Porque prazo fantasma, que não existe, enche a fila da equipe de tarefa falsa. E quando o sistema erra pra mais, todo mundo para de confiar nele — e volta a conferir tudo na mão. Aí você automatizou pra nada.
+
+Uma IA que gera prazo a mais parece produtiva e é péssima. O jurídico raramente quebra por um prazo que faltou. Quebra por ruído.
+
+Em sistema de risco, acertar o "não" vale mais que acertar o "sim".` },
+
   // ===================== [2] STORIES (IG) — grava em bloco =====================
 
   { t: "O gargalo é você", p: "Story 1 · IG · ~20s", x:
@@ -368,6 +423,20 @@ Você não implanta um hábito. Você sustenta.` },
 E a IA não esqueceu ninguém: cada histórico migrou com resumo, funil e contexto preservados. Nenhum relacionamento recomeçou do zero.
 
 Porque ferramenta você troca quando quiser. A memória do cliente, não pode perder. Contexto é o ativo — o resto é acessório.` },
+
+  { t: "PROVA · 3.383 vezes que a equipe corrigiu a IA", p: "Story P7 · IG · ~22s", x:
+`A minha IA jurídica já foi corrigida pela equipe três mil trezentas e oitenta e três vezes. De propósito.
+
+Toda vez que ela classifica uma intimação, o jurista concorda ou discorda. Cada discordância vira dado — e o sistema acorda melhor no dia seguinte.
+
+A IA não substituiu o jurista. Ela aprende com ele todo dia. E esse histórico de correção é um ativo que concorrente nenhum tem.` },
+
+  { t: "PROVA · O lead não estava perdido, estava esquecido", p: "Story P8 · IG · ~20s", x:
+`Um robô meu recupera cliente que sumiu no meio da conversa.
+
+Um scanner varre as conversas paradas e reengaja — com limite, sem bombardear ninguém. Gente que abandonou bem na hora de mandar o documento volta pro fluxo sozinha.
+
+Porque o lead que sumiu quase nunca disse não. Ele só foi esquecido. Follow-up não é insistência. É memória.` },
 
   // ===================== [3] RESERVA — tema já postado como texto no LinkedIn (usar só como Reel no IG, se quiser) =====================
 
