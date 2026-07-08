@@ -182,6 +182,33 @@ E o problema nunca foi a IA. Foi a falta de governança: ninguém pôs limite de
 
 No fim, governança de IA não é só ética, é controle financeiro. Então me diz: a sua empresa adotou IA, ou só abriu a torneira?` },
 
+  { t: "Toda automação é uma conta que chega depois", p: "▶ 16 · Pilar 1 · B2 · ~48s", x:
+`A automação que você cria hoje é uma conta que chega depois. E ninguém te avisa disso na hora de criar.
+
+Todo fluxo automático que entra na operação é um sistema que precisa de dono: ele quebra quando o sistema do outro lado muda, para quando a regra muda — e alguém precisa perceber que parou.
+
+Eu aprendi isso na pele: automatizar demais é trocar trabalho repetitivo por manutenção invisível. E manutenção invisível é a pior dívida que existe, porque você só descobre o tamanho quando ela cobra.
+
+Por isso, antes de automatizar, a pergunta não é só "dá pra automatizar?". É "isso vale um dono?". Se ninguém vai cuidar, é melhor nem nascer.` },
+
+  { t: "Ninguém resiste à mudança", p: "▶ 17 · Pilar 4 · B2 · ~48s", x:
+`Ninguém resiste à mudança. As pessoas resistem ao jeito que ela chega.
+
+Eu já vi ferramenta boa morrer porque foi anunciada num comunicado. E já vi rotina ruim sobreviver anos porque era confortável. A diferença nunca foi a tecnologia. Foi a chegada.
+
+Mudança que chega pronta, de cima pra baixo, vira ameaça: trocaram o jeito da pessoa trabalhar sem perguntar nada. A mesma mudança, construída junto com quem vai usar, vira conquista — gente defende o que ajudou a criar.
+
+Adoção não é a última etapa do projeto. Adoção é o projeto. O resto é instalação.` },
+
+  { t: "O processo perfeito que durou uma semana", p: "▶ 18 · Pilar 1 · B2 · ~48s", x:
+`Eu já escrevi um processo perfeito. Durou uma semana.
+
+Era completo: cada exceção mapeada, cada passo detalhado, um documento bonito. E foi exatamente por isso que morreu. Ninguém abre um manual de vinte páginas com a operação pegando fogo.
+
+O que sobrevive é o processo que cabe na rotina: uma página, as três decisões que importam, o essencial pra pessoa não travar. Feio e vivo vale mais que perfeito e ignorado.
+
+Hoje eu escrevo processo pro dia corrido, não pra auditoria. Se não sobrevive a uma segunda-feira cheia, não é processo. É decoração.` },
+
   // ===================== [2] STORIES (IG) — grava em bloco =====================
 
   { t: "O gargalo é você", p: "Story 1 · IG · ~20s", x:
@@ -264,6 +291,20 @@ Automação boa mexe em fila, erro ou realocação. O resto é enfeite.` },
 A gente chama tudo isso de essencial. Mas metade só existe por hábito.
 
 Antes de automatizar ou acelerar qualquer coisa, a pergunta é: e se a gente simplesmente parasse? Corta primeiro. Acelera depois.` },
+
+  { t: "Quem vai cuidar dela?", p: "Story 10 · IG · ~20s", x:
+`Antes de aprovar qualquer ferramenta de IA, eu faço uma pergunta que trava a reunião: quem vai cuidar dela?
+
+Não quem vai usar. Quem vai perceber quando quebrar, ajustar quando o processo mudar, responder quando der ruim.
+
+Ferramenta sem dono não é investimento. É abandono com mensalidade.` },
+
+  { t: "IA não é projeto, é rotina", p: "Story 11 · IG · ~20s", x:
+`O jeito mais garantido de fracassar com IA: tratar como projeto. Projeto tem começo, meio e fim — aí acaba a verba, o time desmonta e a ferramenta fica órfã.
+
+IA que funciona é rotina: alguém olha toda semana, ajusta, melhora um pouco.
+
+Você não implanta um hábito. Você sustenta.` },
 
   // ===================== [3] RESERVA — tema já postado como texto no LinkedIn (usar só como Reel no IG, se quiser) =====================
 
