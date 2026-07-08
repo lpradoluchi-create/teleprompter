@@ -2,156 +2,257 @@
 // ORDEM = ordem de gravar/postar. Grava de cima pra baixo.
 // Blocos: [1] Vídeos a gravar agora (prioridade) · [2] Stories · [3] Reserva (tema já postado) · [4] Já postados.
 // Para adicionar/editar: mexer aqui e dar git push (o link atualiza sozinho).
+//
+// ─── PLANO v2 (08/07/2026) ───
+// "— CORTE —" = fim de um beat de ~10s. PARE a gravação ali e grave o próximo beat
+// como arquivo separado. Cada beat pode ser polido/enriquecido no Gemini Omni depois
+// (clipes de 10s). Montagem: composer do IG (multi-clipe) ou script ffmpeg (LinkedIn).
+// NÃO LER o "— CORTE —" em voz alta.
+//
+// B1 = vídeo "traduz" (Saraev: 1 conceito/ferramenta/notícia + analogia).
+// B2 = vídeo-assinatura (Hanah: opinião/cicatriz em 1ª pessoa, fecho = modelo mental).
 window.ROTEIROS = [
 
   // ===================== [1] GRAVAR AGORA — vídeos (LinkedIn + Reels), em ordem =====================
 
-  { t: "Sonnet 5: a IA de ponta ficou barata", p: "▶ 1 · Notícia (fresca!) · ~50s", x:
+  { t: "Sonnet 5: a IA de ponta ficou barata", p: "▶ 1 · Notícia (fresca!) · B1 · ~50s", x:
 `A notícia que mais interessa pra quem toca operação no dia a dia não foi o modelo mais potente. Foi o mais barato.
+
+— CORTE —
 
 No fim do mês passado a Anthropic lançou o Claude Sonnet 5, feito pra rodar agente: planejar, usar ferramenta, trabalhar sozinho por um bom tempo. E o pulo do gato é o preço. Ele entrega qualidade perto do modelo de topo por uma fração do custo.
 
+— CORTE —
+
 Por que isso muda o jogo? Porque agente bom era caro demais pra rodar o dia inteiro na operação. Ficava na demonstração. Quando a inteligência de ponta fica barata, ela sai do slide e entra no processo: roda em escala, todo dia, sem estourar o orçamento.
+
+— CORTE —
 
 Foi sempre assim com tecnologia. A virada não acontece quando fica possível. Acontece quando fica barato.` },
 
-  { t: "Sistemas > Gênios", p: "▶ 2 · Pilar 2 · ~50s", x:
+  { t: "Sistemas > Gênios", p: "▶ 2 · Pilar 2 · B2 · ~50s", x:
 `Todo mundo quer contratar o gênio. Eu prefiro construir o sistema.
+
+— CORTE —
 
 O gênio resolve o problema de hoje, e leva a solução embora quando tira férias ou pede demissão. O sistema resolve o problema de novo amanhã, com qualquer pessoa executando.
 
+— CORTE —
+
 Se a sua operação só funciona porque uma pessoa específica é excepcional, você não tem um processo. Tem um ponto único de falha muito talentoso.
+
+— CORTE —
 
 O trabalho de quem lidera não é ser o gênio. É construir o sistema que dispensa o gênio.
 
 Você está dependendo de sistemas, ou de heróis?` },
 
-  { t: "O erro de automatizar 100%", p: "▶ 3 · Pilar 1 · ~50s", x:
+  { t: "O erro de automatizar 100%", p: "▶ 3 · Pilar 1 · B2 · ~50s", x:
 `Automatizar cem por cento de um processo é quase sempre um erro. E parece o oposto do que eu deveria dizer.
+
+— CORTE —
 
 O ganho de automação não é linear. Os primeiros oitenta por cento são baratos e diretos: tarefa repetitiva, regra clara, a máquina faz. Os últimos vinte por cento são as exceções, os casos estranhos, o julgamento — e ali você gasta o dobro do esforço pra automatizar metade tão bem.
 
+— CORTE —
+
 Então eu paro antes. Deixo a máquina fazer o volume e o humano cuidar da exceção e da conferência. Não é preguiça, é economia: a última milha custa mais do que vale.
+
+— CORTE —
 
 Automação madura não é a que dispensa o humano. É a que sabe exatamente onde ele ainda precisa entrar.` },
 
-  { t: "Auditável vale mais que infalível", p: "▶ 4 · Pilar 4 · ~48s", x:
+  { t: "Auditável vale mais que infalível", p: "▶ 4 · Pilar 4 · B2 · ~48s", x:
 `Todo mundo quer uma IA que não erra. Eu prefiro uma IA que deixa rastro.
+
+— CORTE —
 
 Numa operação de verdade, o que te protege não é a máquina ser perfeita. É você conseguir mostrar como ela chegou naquele resultado: onde entrou, o que um humano conferiu, onde terminou a máquina e começou a sua decisão.
 
+— CORTE —
+
 Perfeição ninguém garante. Rastreabilidade, sim.
+
+— CORTE —
 
 E quando alguém perguntar "como isso foi decidido?", a diferença entre quem responde e quem gagueja não é quem usou a melhor IA. É quem registrou.
 
 Auditável vale mais que infalível.` },
 
-  { t: "O que é um agente de IA", p: "▶ 5 · Conceito · ~45s", x:
+  { t: "O que é um agente de IA", p: "▶ 5 · Conceito · B1 · ~45s", x:
 `Todo mundo fala em agente de IA agora, mas a maioria está descrevendo um chatbot. E não é a mesma coisa.
+
+— CORTE —
 
 Um chatbot responde. Você pergunta, ele devolve texto, e para por aí. Um agente age. Você dá um objetivo e ele decide os passos, usa ferramentas, executa, confere o resultado e corrige o rumo sozinho, sem você conduzir cada etapa.
 
+— CORTE —
+
 A diferença prática é essa: o chatbot te ajuda a fazer a tarefa; o agente faz a tarefa e te entrega o resultado. É a passagem da IA que fala pra IA que trabalha.
+
+— CORTE —
 
 Antes de contratar qualquer agente, pergunte uma coisa: ele só responde, ou ele resolve?` },
 
-  { t: "O que são skills", p: "▶ 6 · Conceito · ~45s", x:
+  { t: "O que são skills", p: "▶ 6 · Conceito · B1 · ~45s", x:
 `A pergunta que mais me fazem agora: qual a diferença entre a IA conversar e a IA fazer? A resposta tem um nome. Skill.
+
+— CORTE —
 
 Uma skill é uma habilidade específica que você ensina pro modelo. Não é papo, é procedimento. É pegar uma tarefa que a sua operação faz do mesmo jeito toda vez e transformar num passo a passo que a IA executa sob demanda, sozinha.
 
+— CORTE —
+
 E o pulo do gato é que a skill só carrega quando é preciso. A IA não fica com mil instruções na cabeça o tempo todo; ela puxa a habilidade certa na hora certa.
+
+— CORTE —
 
 É a diferença entre um assistente que sabe tudo mal e um especialista que faz uma coisa muito bem. Skill não é a IA sabendo mais. É a IA sabendo fazer.` },
 
-  { t: "MCP: a IA deixa de ser uma ilha", p: "▶ 7 · Conceito · ~48s", x:
+  { t: "MCP: a IA deixa de ser uma ilha", p: "▶ 7 · Conceito · B1 · ⭐ piloto Omni · ~48s", x:
 `Durante muito tempo a IA foi uma ilha. Ela era inteligente, mas não conseguia tocar em nada: não abria o seu sistema, não puxava o seu dado, não executava nada no mundo real. Você era o cabo entre a IA e as ferramentas, copiando e colando o dia inteiro.
+
+— CORTE —
 
 O que mudou isso tem um nome técnico, MCP, mas a ideia é simples. É uma tomada padrão que conecta a IA às suas ferramentas.
 
+— CORTE —
+
 Com ela, a IA para de só falar sobre o trabalho e passa a fazer o trabalho: consultar, preencher, disparar, dentro dos sistemas que você já usa.
+
+— CORTE —
 
 É a diferença entre um consultor que te dá conselho e um que senta e opera. E é aí que a IA deixa de ser demonstração e vira operação.` },
 
-  { t: "A ferramenta não conserta o processo", p: "▶ 8 · Pilar 1 · ~48s", x:
+  { t: "A ferramenta não conserta o processo", p: "▶ 8 · Pilar 1 · B2 · ~48s", x:
 `A ferramenta nova não vai consertar o seu processo. Esse é um dos erros mais caros que eu vejo.
+
+— CORTE —
 
 A empresa sente uma dor, compra um software e espera que ele arrume a bagunça sozinho. Só que tecnologia boa em cima de processo ruim não conserta nada. Só acelera o problema.
 
+— CORTE —
+
 Se o que fazer já era confuso na mão, vai continuar confuso — agora automático e com mensalidade.
+
+— CORTE —
 
 A pergunta certa antes de comprar não é "essa ferramenta é boa?". É "o meu processo está pronto pra receber ela?".
 
 Ferramenta é a parte fácil. Desenho é o trabalho.` },
 
-  { t: "A ordem é inegociável: Simplificar, Padronizar, Automatizar", p: "▶ 9 · Pilar 1 · ~50s", x:
+  { t: "A ordem é inegociável: Simplificar, Padronizar, Automatizar", p: "▶ 9 · Pilar 1 · B2 · ~50s", x:
 `Simplificar, padronizar, automatizar. Nessa ordem. E a ordem não é enfeite: é a diferença entre dar certo e dar errado.
+
+— CORTE —
 
 Quase todo mundo pula direto pra automatizar, porque é a parte que brilha. Aí automatiza um processo confuso e ganha uma confusão mais rápida — e mais cara.
 
+— CORTE —
+
 Antes de automatizar, eu elimino o que não precisa existir. Depois transformo o que sobra em regra clara. Só então entrego pra máquina.
+
+— CORTE —
 
 Pular etapa parece mais rápido. É o caminho mais caro pro prejuízo.
 
 Você está automatizando, ou congelando a bagunça em código?` },
 
-  { t: "Por que a IA alucina — e como o RAG resolve", p: "▶ 10 · Conceito · ~48s", x:
+  { t: "Por que a IA alucina — e como o RAG resolve", p: "▶ 10 · Conceito · B1 · ~48s", x:
 `Se a IA já te deu uma resposta errada com a maior confiança, você viu uma alucinação. E quase sempre a causa é uma só: ela respondeu de memória, sem os seus dados na frente.
+
+— CORTE —
 
 O modelo é treinado num apanhado gigante da internet até certa data. Ele não conhece o seu processo, o seu cliente, o seu número de ontem. Quando você pergunta sobre isso, ele preenche a lacuna com o que soa provável. E às vezes inventa.
 
+— CORTE —
+
 A técnica que resolve tem um nome: RAG. Antes de responder, a IA busca a informação certa na sua base e responde ancorada naquilo, não no chute.
+
+— CORTE —
 
 A regra é simples: IA sem o seu contexto não é inteligente, é confiante. E confiança sem fonte é o jeito mais caro de errar.` },
 
-  { t: "Janela de contexto: por que 1 milhão de tokens importa", p: "▶ 11 · Conceito · ~48s", x:
+  { t: "Janela de contexto: por que 1 milhão de tokens importa", p: "▶ 11 · Conceito · B1 · ~48s", x:
 `Saiu uma notícia técnica que parece detalhe de nerd, mas muda o que dá pra fazer com IA na prática: os modelos novos leem um milhão de tokens de uma vez.
+
+— CORTE —
 
 Traduzindo, é a memória de trabalho da IA numa única conversa. Quanto ela consegue segurar na cabeça ao mesmo tempo. Um milhão de tokens é mais ou menos setecentas mil palavras. É o processo inteiro, o contrato inteiro, meses de histórico, tudo aberto na frente dela ao mesmo tempo.
 
+— CORTE —
+
 Antes você tinha que picar o documento em pedacinhos, e a IA perdia o fio. Agora ela vê o todo.
+
+— CORTE —
 
 Pra quem opera, isso é a diferença entre uma IA que responde sobre um trecho e uma que entende o caso inteiro. Contexto não é enfeite. É o que separa resposta genérica de resposta que serve.` },
 
-  { t: "Automação vs Agente", p: "▶ 12 · Conceito · ~48s", x:
+  { t: "Automação vs Agente", p: "▶ 12 · Conceito · B1 · ~48s", x:
 `Automação e agente parecem a mesma coisa, e não são. Confundir os dois faz você construir a ferramenta errada.
+
+— CORTE —
 
 Automação é um trilho. Se acontece A, faça B. É previsível, é barato, é ótimo pra tarefa que sempre segue o mesmo caminho. O problema é que a vida real tem exceção, e o trilho não sabe o que fazer quando o caso foge do script.
 
+— CORTE —
+
 O agente é diferente. Ele lida com o que não estava previsto: recebe o objetivo, avalia a situação e decide o caminho na hora.
+
+— CORTE —
 
 A escolha certa não é qual é mais moderno. É: a tarefa sempre segue o mesmo trilho, ou ela precisa de julgamento? Trilho, automatiza. Julgamento, agente. Usar agente onde bastava automação é pagar caro por uma decisão que ninguém precisava tomar.` },
 
-  { t: "A IA que sabe recuar", p: "▶ 13 · Notícia · ~48s", x:
+  { t: "A IA que sabe recuar", p: "▶ 13 · Notícia · B1 · ~48s", x:
 `Um detalhe do lançamento do modelo mais avançado da Anthropic me chamou mais atenção que a potência dele.
+
+— CORTE —
 
 Em temas de risco alto, como segurança cibernética, área biológica e química, o modelo não responde. Ele recusa e passa a tarefa pra um modelo anterior, mais contido.
 
+— CORTE —
+
 Pensa no que isso significa. O sistema mais capaz foi desenhado pra saber quando não usar toda a capacidade. Isso é governança virando parte do produto, não um adendo.
+
+— CORTE —
 
 E é exatamente o que falta na maioria das empresas correndo pra adotar IA: elas ligam a potência e esquecem o freio.
 
 A lição não é técnica, é de gestão. Poder sem limite não é vantagem. Vantagem é saber, na hora certa, recuar.` },
 
-  { t: "Velocidade impressiona, controle diferencia", p: "▶ 14 · Pilar 4 · ~48s", x:
+  { t: "Velocidade impressiona, controle diferencia", p: "▶ 14 · Pilar 4 · B2 · ~48s", x:
 `Acelerar virou commodity. O que quase ninguém constrói é o controle.
+
+— CORTE —
 
 Porque todo mundo quer mais: mais leads, mais entregas, mais IA, mais volume. E acelerar ficou barato — hoje tem ferramenta pra tudo.
 
+— CORTE —
+
 Só que numa demo a velocidade impressiona; numa operação de verdade, o que separa quem escala de quem implode é outra coisa: saber o que a máquina fez, conseguir auditar e ter o rastro de cada decisão.
+
+— CORTE —
 
 Porque velocidade sem guarda-corpo não é produtividade, é velocidade rumo ao prejuízo. E governança não é o freio da inovação; é justamente o que deixa você acelerar com segurança.
 
 Então fica a pergunta: a sua operação está crescendo sob controle, ou só está rápida?` },
 
-  { t: "Premiar quem usa IA foi o erro", p: "▶ 15 · Pilar 4 · ~50s", x:
+  { t: "Premiar quem usa IA foi o erro", p: "▶ 15 · Pilar 4 · B2 · ~50s", x:
 `Algumas das maiores empresas do mundo premiaram quem mais usava IA. E deu muito ruim.
+
+— CORTE —
 
 A Amazon e a Meta criaram rankings internos de uso de IA. E o que aconteceu? Gente rodando robô em tarefa inútil só pra subir no placar, com o custo explodindo e valor real nenhum. As duas acabaram desligando os rankings.
 
+— CORTE —
+
 A Uber, por exemplo, estourou o orçamento de IA do ano inteiro em só quatro meses. Hoje ela limita quanto cada funcionário pode gastar com IA por mês.
 
+— CORTE —
+
 E o problema nunca foi a IA. Foi a falta de governança: ninguém pôs limite de consumo, ninguém definiu métrica de valor, ninguém auditou o ROI. Porque medir quanto você usa é fácil; o que importa é medir se aquilo gerou resultado.
+
+— CORTE —
 
 No fim, governança de IA não é só ética, é controle financeiro. Então me diz: a sua empresa adotou IA, ou só abriu a torneira?` },
 
