@@ -209,6 +209,62 @@ O que sobrevive é o processo que cabe na rotina: uma página, as três decisõe
 
 Hoje eu escrevo processo pro dia corrido, não pra auditoria. Se não sobrevive a uma segunda-feira cheia, não é processo. É decoração.` },
 
+  // ===================== [1B] COM PROVA — dados reais da operação (anonimizado) =====================
+  // REGRA: nunca nomear a FG; sistemas descritos por função (não codinome); só números
+  // do dossiê, exatos; enquadrar em método/gestão, nunca promessa de resultado a cliente.
+  // Fonte primária = a própria operação (não precisa link externo). Formato: cena/prova → princípio.
+
+  { t: "PROVA · Um agente de IA fecha contrato em 11 minutos", p: "▶ P1 · Prova (comercial) · ~50s", x:
+`Um agente de IA que eu construí fecha contrato em onze minutos. Onze é a mediana, não o recorde.
+
+Ele atende no WhatsApp por áudio, entende o que o cliente fala e responde falando. Faz a qualificação, agenda a reunião na agenda real dos advogados e manda o contrato pra assinar dentro da própria conversa — sem trocar de canal, sem formulário, sem "aguarde retorno".
+
+E o número que importa: de cada dez contratos que ele envia, seis a sete são assinados. Onze minutos entre o link e a assinatura.
+
+A lição não é sobre chatbot. É sobre onde a IA gera valor de verdade. Não é a que responde pergunta. É a que fecha o ciclo — leva do primeiro "oi" ao contrato assinado sem passar por uma pessoa no meio.
+
+Atendimento vira operação quando a máquina não só conversa. Ela conclui.` },
+
+  { t: "PROVA · 95 contra 7: o número que mudou como escolho caso", p: "▶ P2 · Prova (dado decide) · ~52s", x:
+`Um número me fez parar de tentar litigar mais pra litigar melhor.
+
+Eu cruzei mais de mil processos da operação com o resultado real, conferido no tribunal. E o padrão foi brutal: quando o laudo da perícia é positivo, o êxito é de noventa e cinco por cento. Quando é negativo, só sete por cento dos casos revertem.
+
+Ou seja: a perícia decide o jogo. E ela acontece lá na frente, depois que você já aceitou o caso e já investiu nele.
+
+Então a alavanca não é trabalhar mais o caso ruim. É escolher melhor o caso na entrada. O dado parou de ser um relatório do que já passou e virou o critério do que entra.
+
+Essa é a diferença entre medir pra saber e medir pra decidir. Todo mundo tem dashboard. Poucos deixam o dado mudar a decisão.` },
+
+  { t: "PROVA · Minha IA não consegue inventar jurisprudência", p: "▶ P3 · Prova (anti-alucinação) · ~50s", x:
+`A IA que escreve as minhas peças não consegue inventar jurisprudência. E isso não é sorte, é arquitetura.
+
+O medo de todo mundo é o mesmo: a IA cita uma súmula que não existe e alguém protocola. Eu não resolvi isso pedindo pro modelo "por favor, não invente". Pedido não segura nada.
+
+Eu resolvi construindo uma parede. A redação só pode puxar de um banco curado por mim: seiscentas e trinta e seis normas reais e duzentos argumentos jurídicos estruturados. Qualquer citação fora desse pool é barrada automaticamente e conferida contra a fonte. Jurisprudência inventada é impossível por construção — não improvável, impossível.
+
+É a diferença entre confiar no modelo e desenhar o sistema onde o erro não cabe. Anti-alucinação não é um prompt caprichado. É uma parede que a IA não atravessa.` },
+
+  { t: "PROVA · R$ 0,00 de diferença", p: "▶ P4 · Prova (auditável) · ~50s", x:
+`Eu prefiro uma IA que deixa rastro a uma que promete não errar. E agora eu tenho o número disso.
+
+O meu motor de cálculo reconstrói a conta do zero, a partir do documento bruto. Nas memórias de cumprimento de sentença, ele bate ao centavo contra o valor que o juiz fixou: zero de diferença. Em petição inicial, treze centésimos por cento de divergência, auditados contra casos reais.
+
+Mas o número que eu mais gosto é outro. Quando ele encontra um caso que não domina com segurança, ele rebaixa a própria confiança e manda pra revisão humana — em vez de cuspir um valor bonito e errado.
+
+O que protege a operação nunca foi a máquina ser perfeita. É ela saber onde não confiar em si mesma. E te deixar conferir cada passo.` },
+
+  { t: "PROVA · 100 protocolos por mês, 4 pessoas", p: "▶ P5 · Prova (Sistemas>Gênios) · ~50s", x:
+`Cem protocolos por mês, com quatro pessoas. Esse número é a minha tese inteira num só lugar.
+
+E não é porque as quatro são gênias. É porque a parte repetitiva não depende delas. Qualificar o lead, coletar documento, calcular, redigir a peça, avisar o cliente — isso roda em sistema. A pessoa entra onde precisa de julgamento: a exceção, a decisão, a conferência.
+
+Quando você tira o trabalho braçal do humano e deixa ele só na decisão, um time pequeno entrega o volume de um time grande.
+
+Eu não contratei mais gente pra crescer. Construí o sistema que dispensa precisar dela pra parte que a máquina faz melhor.
+
+Escala não é sobre quantas mãos você tem. É sobre quanto do trabalho não precisa de mão nenhuma.` },
+
   // ===================== [2] STORIES (IG) — grava em bloco =====================
 
   { t: "O gargalo é você", p: "Story 1 · IG · ~20s", x:
@@ -305,6 +361,13 @@ Ferramenta sem dono não é investimento. É abandono com mensalidade.` },
 IA que funciona é rotina: alguém olha toda semana, ajusta, melhora um pouco.
 
 Você não implanta um hábito. Você sustenta.` },
+
+  { t: "PROVA · A IA que não esqueceu nenhum cliente", p: "Story P6 · IG · ~22s", x:
+`Eu troquei a plataforma de atendimento da operação inteira. Trezentas e setenta conversas de clientes.
+
+E a IA não esqueceu ninguém: cada histórico migrou com resumo, funil e contexto preservados. Nenhum relacionamento recomeçou do zero.
+
+Porque ferramenta você troca quando quiser. A memória do cliente, não pode perder. Contexto é o ativo — o resto é acessório.` },
 
   // ===================== [3] RESERVA — tema já postado como texto no LinkedIn (usar só como Reel no IG, se quiser) =====================
 
