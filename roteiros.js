@@ -207,15 +207,15 @@ A lição não é sobre chatbot. É sobre onde a IA gera valor de verdade. Não 
 Atendimento vira operação quando a máquina não só conversa. Ela conclui.` },
 
   { t: "PROVA · 95 contra 7: o número que mudou como escolho caso", p: "▶ P2 · Prova (dado decide) · ~52s", x:
-`Um número me fez parar de tentar litigar mais pra litigar melhor.
+`Um número me fez parar de querer litigar mais e começar a litigar melhor.
 
-Eu cruzei mais de mil processos da operação com o resultado real, conferido no tribunal. E o padrão foi brutal: quando o laudo da perícia é positivo, o êxito é de noventa e cinco por cento. Quando é negativo, só sete por cento dos casos revertem.
+Eu cruzei mais de mil processos da operação com o resultado real, conferido no tribunal. O padrão foi brutal: quando o laudo da perícia é positivo, o êxito é de noventa e cinco por cento. Quando é negativo, só sete por cento dos casos revertem.
 
-Ou seja: a perícia decide o jogo. E ela acontece lá na frente, depois que você já aceitou o caso e já investiu nele.
+Ou seja, a perícia praticamente prevê o resultado. E ela aparece lá na frente, depois que você já aceitou o caso e já investiu nele.
 
-Então a alavanca não é trabalhar mais o caso ruim. É escolher melhor o caso na entrada. O dado parou de ser um relatório do que já passou e virou o critério do que entra.
+Isso mudou a minha triagem. O dado deixou de ser um relatório do que já passou e virou o critério do que entra: eu escolho melhor o caso na porta, olhando o evento que costuma decidir o jogo.
 
-Essa é a diferença entre medir pra saber e medir pra decidir. Todo mundo tem dashboard. Poucos deixam o dado mudar a decisão.` },
+Todo mundo tem dashboard. O que conta é deixar o dado mudar a sua decisão.` },
 
   { t: "PROVA · Minha IA não consegue inventar jurisprudência", p: "▶ P3 · Prova (anti-alucinação) · ~50s", x:
 `A IA que escreve as minhas peças não consegue inventar jurisprudência. E isso não é sorte, é arquitetura.
@@ -300,6 +300,24 @@ Porque prazo fantasma, que não existe, enche a fila da equipe de tarefa falsa. 
 Uma IA que gera prazo a mais parece produtiva e é péssima. O jurídico raramente quebra por um prazo que faltou. Quebra por ruído.
 
 Em sistema de risco, acertar o "não" vale mais que acertar o "sim".` },
+
+  { t: "PROVA · A esteira que produz a peça", p: "▶ P11 · Prova (esteira) · B1 · ~45s", x:
+`A peça que a minha operação entrega rápido não foi escrita por um gênio. Ela passou por uma esteira.
+
+Deixa eu abrir a caixa. Em vez de uma pessoa fazer a peça inteira do zero, o trabalho vira estações. Uma triagem lê o caso e separa. Uma etapa monta a minuta a partir do padrão. Outra revisa. Outra protocola. Cada estação faz uma coisa só, e por isso faz bem.
+
+O ganho mais óbvio é a velocidade. Mas o que importa mesmo é outro: o erro fica preso numa estação, fácil de achar. E a qualidade para de depender de quem pegou o caso naquele dia.
+
+Toda operação que dobra de tamanho funciona assim. Ninguém escala refazendo tudo do zero, toda vez.` },
+
+  { t: "+40% de eficiência é uma armadilha", p: "▶ 19 · Pilar 1 · B2 · ~45s", x:
+`Todo software de gestão vende a mesma promessa: mais quarenta por cento de eficiência. E eu aprendi a desconfiar desse número.
+
+Eficiência em quê? Medida como? Comparada com qual ponto de partida? Na maioria das vezes, ninguém sabe responder. É um número redondo, feito pra fechar a venda.
+
+Ganho de verdade tem endereço. Dá pra apontar com o dedo: aqui estava o gargalo, isto aqui destravou, e o resultado é este. Com antes e depois.
+
+Da próxima vez que te venderem um por cento mágico, faz uma pergunta só: por causa de quê? Sem essa resposta, você está comprando um slide.` },
 
   // ===================== [2] STORIES (IG) — grava em bloco =====================
 
