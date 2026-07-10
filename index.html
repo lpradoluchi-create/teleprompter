@@ -35,8 +35,8 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 .sl label{font-size:11px;font-weight:700;color:var(--gold-lt);letter-spacing:.5px;text-transform:uppercase;display:flex;justify-content:space-between;}
 .sl input{width:100%;margin-top:6px;accent-color:var(--gold);}
 .row{display:flex;align-items:center;justify-content:space-between;gap:12px;}
-.btns{display:flex;align-items:center;gap:14px;}
-.ic{width:52px;height:52px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:800;}
+.btns{display:flex;align-items:center;gap:11px;}
+.ic{width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;font-size:19px;font-weight:800;}
 .ic:active{transform:scale(.94);}
 .ic.on{background:var(--gold);color:var(--dk);border-color:var(--gold);}
 #rec{width:74px;height:74px;border-radius:50%;background:#fff;border:5px solid rgba(255,255,255,.35);position:relative;}
@@ -94,7 +94,7 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
     <div class="sl"><label>Fonte <span id="fntV">34</span></label><input id="fnt" type="range" min="22" max="64" value="34"></div>
   </div>
   <div class="row">
-    <div class="btns"><div class="ic" id="menuBtn" title="roteiros">☰</div><div class="ic" id="play">▶</div></div>
+    <div class="btns"><div class="ic" id="menuBtn" title="roteiros">☰</div><div class="ic" id="rewind" title="voltar ao início">⟲</div><div class="ic" id="play">▶</div></div>
     <button id="rec" aria-label="gravar"></button>
     <div class="btns"><div class="ic" id="mirTxt" title="espelhar texto">T</div><div class="ic on" id="mirCam" title="espelhar câmera">◨</div></div>
   </div>
@@ -189,6 +189,12 @@ function loop(){ if(scrolling){ promptEl.scrollTop += (+$('#spd').value)/60;
   if(promptEl.scrollTop+promptEl.clientHeight>=textEl.scrollHeight){ setPlay(false); } } requestAnimationFrame(loop); }
 function setPlay(on){ scrolling=on; $('#play').textContent=on?'❚❚':'▶'; $('#play').classList.toggle('on',on); }
 $('#play').onclick=()=>setPlay(!scrolling);
+$('#rewind').onclick=()=>{ promptEl.scrollTop=0; setPlay(false); };   // volta o texto ao início pra recomeçar
+// arrastar o texto com o dedo pra reposicionar (pausa o rolo automático ao tocar)
+let _dY=null,_dS=0;
+promptEl.addEventListener('touchstart',e=>{ _dY=e.touches[0].clientY; _dS=promptEl.scrollTop; setPlay(false); },{passive:true});
+promptEl.addEventListener('touchmove',e=>{ if(_dY!=null) promptEl.scrollTop=_dS-(e.touches[0].clientY-_dY); },{passive:true});
+promptEl.addEventListener('touchend',()=>{ _dY=null; },{passive:true});
 $('#spd').oninput=e=>$('#spdV').textContent=e.target.value;
 $('#fnt').oninput=e=>{ $('#fntV').textContent=e.target.value; textEl.style.fontSize=e.target.value+'px'; };
 $('#mirTxt').onclick=function(){ promptEl.classList.toggle('mir'); this.classList.toggle('on'); };

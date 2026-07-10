@@ -1,13 +1,12 @@
 // Biblioteca de roteiros do teleprompter (falas corridas, prontas pra ler).
-// ORDEM = ordem de gravar/postar. Grava de cima pra baixo.
-// Blocos: [1] Vídeos a gravar agora (prioridade) · [2] Stories · [3] Reserva (tema já postado) · [4] Já postados.
+// ORDEM = sugestão de gravação (as DATAS de postagem ficam nas pastas datadas do Desktop).
+// Blocos: [1] Vídeos a gravar (prioridade) · [1B] Com prova · [2] Stories · [3] Reserva · [4] Já postados.
 // Para adicionar/editar: mexer aqui e dar git push (o link atualiza sozinho).
 //
-// ─── PLANO v2 (08/07/2026) ───
-// "— CORTE —" só aparece nos vídeos com edição Gemini Omni planejada (Agente, Skills, MCP —
-// metáfora visual clara). Nesses: PARE a gravação a cada corte e grave o próximo beat (~10s)
-// como arquivo separado; o prompt de edição está em prompt-gemini-omni.txt na pasta datada
-// do vídeo. NÃO LER o "— CORTE —" em voz alta. Os demais vídeos = take corrido normal.
+// ─── PLANO v2 (atualizado 10/07/2026) ───
+// TODO vídeo é TAKE CORRIDO (sem cortes de 10s / sem Gemini Omni — abandonado).
+// A ordem de POSTAR (com datas) está nas pastas datadas do Desktop\posicionamento —
+// prova e conceito já se intercalam lá (1ª prova posta 17/07). Aqui é o banco de gravação.
 //
 // B1 = vídeo "traduz" (Saraev: 1 conceito/ferramenta/notícia + analogia).
 // B2 = vídeo-assinatura (Hanah: opinião/cicatriz em 1ª pessoa, fecho = modelo mental).
@@ -58,45 +57,27 @@ Auditável vale mais que infalível.` },
   { t: "O que é um agente de IA", p: "▶ 5 · Conceito · B1 · ~45s", x:
 `Todo mundo fala em agente de IA agora, mas a maioria está descrevendo um chatbot. E não é a mesma coisa.
 
-— CORTE —
-
 Um chatbot responde. Você pergunta, ele devolve texto, e para por aí. Um agente age. Você dá um objetivo e ele decide os passos, usa ferramentas, executa, confere o resultado e corrige o rumo sozinho, sem você conduzir cada etapa.
 
-— CORTE —
-
 A diferença prática é essa: o chatbot te ajuda a fazer a tarefa; o agente faz a tarefa e te entrega o resultado. É a passagem da IA que fala pra IA que trabalha.
-
-— CORTE —
 
 Antes de contratar qualquer agente, pergunte uma coisa: ele só responde, ou ele resolve?` },
 
   { t: "O que são skills", p: "▶ 6 · Conceito · B1 · ~45s", x:
 `A pergunta que mais me fazem agora: qual a diferença entre a IA conversar e a IA fazer? A resposta tem um nome. Skill.
 
-— CORTE —
-
 Uma skill é uma habilidade específica que você ensina pro modelo. Não é papo, é procedimento. É pegar uma tarefa que a sua operação faz do mesmo jeito toda vez e transformar num passo a passo que a IA executa sob demanda, sozinha.
-
-— CORTE —
 
 E o pulo do gato é que a skill só carrega quando é preciso. A IA não fica com mil instruções na cabeça o tempo todo; ela puxa a habilidade certa na hora certa.
 
-— CORTE —
-
 É a diferença entre um assistente que sabe tudo mal e um especialista que faz uma coisa muito bem. Skill não é a IA sabendo mais. É a IA sabendo fazer.` },
 
-  { t: "MCP: a IA deixa de ser uma ilha", p: "▶ 7 · Conceito · B1 · ⭐ piloto Omni · ~48s", x:
+  { t: "MCP: a IA deixa de ser uma ilha", p: "▶ 7 · Conceito · B1 · ~48s", x:
 `Durante muito tempo a IA foi uma ilha. Ela era inteligente, mas não conseguia tocar em nada: não abria o seu sistema, não puxava o seu dado, não executava nada no mundo real. Você era o cabo entre a IA e as ferramentas, copiando e colando o dia inteiro.
-
-— CORTE —
 
 O que mudou isso tem um nome técnico, MCP, mas a ideia é simples. É uma tomada padrão que conecta a IA às suas ferramentas.
 
-— CORTE —
-
 Com ela, a IA para de só falar sobre o trabalho e passa a fazer o trabalho: consultar, preencher, disparar, dentro dos sistemas que você já usa.
-
-— CORTE —
 
 É a diferença entre um consultor que te dá conselho e um que senta e opera. E é aí que a IA deixa de ser demonstração e vira operação.` },
 
