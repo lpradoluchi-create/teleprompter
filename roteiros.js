@@ -23,16 +23,16 @@ Por que isso muda o jogo? Porque agente bom era caro demais pra rodar o dia inte
 
 Foi sempre assim com tecnologia. A virada não acontece quando fica possível. Acontece quando fica barato.` },
 
-  { t: "Sistemas > Gênios", p: "▶ 2 · Pilar 2 · B2 · ~50s", x:
-`Durante muito tempo eu fui a peça que não podia faltar — e demorei pra enxergar o risco que isso era.
+  { t: "Sistemas > Gênios", p: "▶ 2 · Pilar 2 · B2 · ~42s", x:
+`Eu já quis ser a pessoa que resolve tudo. Hoje, eu vejo isso como um risco.
 
-Uma operação que só funciona porque uma pessoa específica é excepcional está confundindo talento com processo. E talento tira férias, adoece, um dia vai embora. No dia em que essa pessoa falta, tudo trava junto — porque o que ela sabia nunca virou sistema, ficou na cabeça dela.
+Se a operação só anda quando eu estou por perto, ela ficou dependente de mim. E dependência não escala. Ela quebra no primeiro dia que eu falto.
 
-Então eu virei a chave. Cada coisa que só eu dava conta de fazer, eu transformei num processo que qualquer um da equipe executa. Doeu no ego no começo — até eu entender que continuar insubstituível me tornava o teto da própria operação.
+Então eu mudei. Parei de guardar o que só eu sabia. Comecei a transformar cada tarefa num passo a passo que qualquer um da equipe segue.
 
-A pessoa mais valiosa de um time é a que constrói o sistema capaz de rodar sem ela.
+Hoje, eu durmo tranquilo quando vejo tudo rodar sem mim.
 
-Você está construindo algo que depende de você — ou algo que te liberta?` },
+E você? Quer ser necessário, ou quer construir algo que anda sem você?` },
 
   { t: "O erro de automatizar 100%", p: "▶ 3 · Pilar 1 · B2 · ~50s", x:
 `Automatizar cem por cento de um processo é quase sempre um erro. E parece o oposto do que eu deveria dizer.
