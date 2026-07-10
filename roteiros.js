@@ -66,11 +66,11 @@ Antes de contratar qualquer agente, pergunte uma coisa: ele só responde, ou ele
   { t: "O que são skills", p: "▶ 6 · Conceito · B1 · ~45s", x:
 `A pergunta que mais me fazem agora: qual a diferença entre a IA conversar e a IA fazer? A resposta tem um nome. Skill.
 
-Uma skill é uma habilidade específica que você ensina pro modelo. Não é papo, é procedimento. É pegar uma tarefa que a sua operação faz do mesmo jeito toda vez e transformar num passo a passo que a IA executa sob demanda, sozinha.
+Uma skill é uma habilidade específica que você ensina pro modelo. É procedimento na veia. É pegar uma tarefa que a sua operação faz do mesmo jeito toda vez e transformar num passo a passo que a IA executa sob demanda, sozinha.
 
 E o pulo do gato é que a skill só carrega quando é preciso. A IA não fica com mil instruções na cabeça o tempo todo; ela puxa a habilidade certa na hora certa.
 
-É a diferença entre um assistente que sabe tudo mal e um especialista que faz uma coisa muito bem. Skill não é a IA sabendo mais. É a IA sabendo fazer.` },
+É a diferença entre um assistente que sabe tudo mais ou menos e um especialista que faz uma coisa muito bem. Skill é a IA passando de saber sobre pra saber fazer.` },
 
   { t: "MCP: a IA deixa de ser uma ilha", p: "▶ 7 · Conceito · B1 · ~48s", x:
 `Durante muito tempo a IA foi uma ilha. Ela era inteligente, mas não conseguia tocar em nada: não abria o seu sistema, não puxava o seu dado, não executava nada no mundo real. Você era o cabo entre a IA e as ferramentas, copiando e colando o dia inteiro.
@@ -88,12 +88,12 @@ A empresa sente uma dor, compra um software e espera que ele arrume a bagunça s
 
 Se o que fazer já era confuso na mão, vai continuar confuso — agora automático e com mensalidade.
 
-A pergunta certa antes de comprar não é "essa ferramenta é boa?". É "o meu processo está pronto pra receber ela?".
+A pergunta certa antes de comprar é: o meu processo está pronto pra receber essa ferramenta?
 
 Ferramenta é a parte fácil. Desenho é o trabalho.` },
 
   { t: "A ordem é inegociável: Simplificar, Padronizar, Automatizar", p: "▶ 9 · Pilar 1 · B2 · ~50s", x:
-`Simplificar, padronizar, automatizar. Nessa ordem. E a ordem não é enfeite: é a diferença entre dar certo e dar errado.
+`Simplificar, padronizar, automatizar. Nessa ordem. E a ordem importa de verdade: é ela que separa dar certo de dar errado.
 
 Quase todo mundo pula direto pra automatizar, porque é a parte que brilha. Aí automatiza um processo confuso e ganha uma confusão mais rápida — e mais cara.
 
@@ -110,7 +110,7 @@ O modelo é treinado num apanhado gigante da internet até certa data. Ele não 
 
 A técnica que resolve tem um nome: RAG. Antes de responder, a IA busca a informação certa na sua base e responde ancorada naquilo, não no chute.
 
-A regra é simples: IA sem o seu contexto não é inteligente, é confiante. E confiança sem fonte é o jeito mais caro de errar.` },
+A regra é simples: sem o seu contexto, a IA só tem confiança pra oferecer. E confiança sem fonte é o jeito mais caro de errar.` },
 
   { t: "Janela de contexto: por que 1 milhão de tokens importa", p: "▶ 11 · Conceito · B1 · ~48s", x:
 `Saiu uma notícia técnica que parece detalhe de nerd, mas muda o que dá pra fazer com IA na prática: os modelos novos leem um milhão de tokens de uma vez.
@@ -119,7 +119,7 @@ Traduzindo, é a memória de trabalho da IA numa única conversa. Quanto ela con
 
 Antes você tinha que picar o documento em pedacinhos, e a IA perdia o fio. Agora ela vê o todo.
 
-Pra quem opera, isso é a diferença entre uma IA que responde sobre um trecho e uma que entende o caso inteiro. Contexto não é enfeite. É o que separa resposta genérica de resposta que serve.` },
+Pra quem opera, isso é a diferença entre uma IA que responde sobre um trecho e uma que entende o caso inteiro. Contexto é o que separa uma resposta genérica de uma resposta que serve.` },
 
   { t: "Automação vs Agente", p: "▶ 12 · Conceito · B1 · ~48s", x:
 `Automação e agente parecem a mesma coisa, e não são. Confundir os dois faz você construir a ferramenta errada.
@@ -128,7 +128,7 @@ Automação é um trilho. Se acontece A, faça B. É previsível, é barato, é 
 
 O agente é diferente. Ele lida com o que não estava previsto: recebe o objetivo, avalia a situação e decide o caminho na hora.
 
-A escolha certa não é qual é mais moderno. É: a tarefa sempre segue o mesmo trilho, ou ela precisa de julgamento? Trilho, automatiza. Julgamento, agente. Usar agente onde bastava automação é pagar caro por uma decisão que ninguém precisava tomar.` },
+A escolha certa vem de uma pergunta só: a tarefa sempre segue o mesmo trilho, ou ela precisa de julgamento? Trilho, automatiza. Julgamento, agente. Usar agente onde bastava automação é pagar caro por uma decisão que ninguém precisava tomar.` },
 
   { t: "A IA que sabe recuar", p: "▶ 13 · Notícia · B1 · ~48s", x:
 `Um detalhe do lançamento do modelo mais avançado da Anthropic me chamou mais atenção que a potência dele.
@@ -139,7 +139,7 @@ Pensa no que isso significa. O sistema mais capaz foi desenhado pra saber quando
 
 E é exatamente o que falta na maioria das empresas correndo pra adotar IA: elas ligam a potência e esquecem o freio.
 
-A lição não é técnica, é de gestão. Poder sem limite não é vantagem. Vantagem é saber, na hora certa, recuar.` },
+A lição aqui é de gestão. Poder sem limite vira armadilha — a vantagem real é saber, na hora certa, recuar.` },
 
   { t: "Velocidade impressiona, controle diferencia", p: "▶ 14 · Pilar 4 · B2 · ~48s", x:
 `Acelerar virou commodity. O que quase ninguém constrói é o controle.
@@ -148,7 +148,7 @@ Porque todo mundo quer mais: mais leads, mais entregas, mais IA, mais volume. E 
 
 Só que numa demo a velocidade impressiona; numa operação de verdade, o que separa quem escala de quem implode é outra coisa: saber o que a máquina fez, conseguir auditar e ter o rastro de cada decisão.
 
-Porque velocidade sem guarda-corpo não é produtividade, é velocidade rumo ao prejuízo. E governança não é o freio da inovação; é justamente o que deixa você acelerar com segurança.
+Porque velocidade sem guarda-corpo é só velocidade rumo ao prejuízo. E governança funciona como o freio que deixa você acelerar com segurança — sem ele, ninguém acelera de verdade.
 
 Então fica a pergunta: a sua operação está crescendo sob controle, ou só está rápida?` },
 
@@ -161,7 +161,7 @@ A Uber, por exemplo, estourou o orçamento de IA do ano inteiro em só quatro me
 
 E o problema nunca foi a IA. Foi a falta de governança: ninguém pôs limite de consumo, ninguém definiu métrica de valor, ninguém auditou o ROI. Porque medir quanto você usa é fácil; o que importa é medir se aquilo gerou resultado.
 
-No fim, governança de IA não é só ética, é controle financeiro. Então me diz: a sua empresa adotou IA, ou só abriu a torneira?` },
+No fim, governança de IA é controle financeiro tanto quanto é ética. Então me diz: a sua empresa adotou IA, ou só abriu a torneira?` },
 
   { t: "Toda automação é uma conta que chega depois", p: "▶ 16 · Pilar 1 · B2 · ~48s", x:
 `A automação que você cria hoje é uma conta que chega depois. E ninguém te avisa disso na hora de criar.
@@ -170,7 +170,7 @@ Todo fluxo automático que entra na operação é um sistema que precisa de dono
 
 Eu aprendi isso na pele: automatizar demais é trocar trabalho repetitivo por manutenção invisível. E manutenção invisível é a pior dívida que existe, porque você só descobre o tamanho quando ela cobra.
 
-Por isso, antes de automatizar, a pergunta não é só "dá pra automatizar?". É "isso vale um dono?". Se ninguém vai cuidar, é melhor nem nascer.` },
+Por isso, antes de automatizar, a pergunta que importa é: isso vale um dono? Se ninguém vai cuidar, é melhor nem nascer.` },
 
   { t: "Ninguém resiste à mudança", p: "▶ 17 · Pilar 4 · B2 · ~48s", x:
 `Ninguém resiste à mudança. As pessoas resistem ao jeito que ela chega.
@@ -179,7 +179,7 @@ Eu já vi ferramenta boa morrer porque foi anunciada num comunicado. E já vi ro
 
 Mudança que chega pronta, de cima pra baixo, vira ameaça: trocaram o jeito da pessoa trabalhar sem perguntar nada. A mesma mudança, construída junto com quem vai usar, vira conquista — gente defende o que ajudou a criar.
 
-Adoção não é a última etapa do projeto. Adoção é o projeto. O resto é instalação.` },
+Adoção é o projeto inteiro. Comprar, instalar, configurar: isso é só o começo.` },
 
   { t: "O processo perfeito que durou uma semana", p: "▶ 18 · Pilar 1 · B2 · ~48s", x:
 `Eu já escrevi um processo perfeito. Durou uma semana.
@@ -188,7 +188,7 @@ Era completo: cada exceção mapeada, cada passo detalhado, um documento bonito.
 
 O que sobrevive é o processo que cabe na rotina: uma página, as três decisões que importam, o essencial pra pessoa não travar. Feio e vivo vale mais que perfeito e ignorado.
 
-Hoje eu escrevo processo pro dia corrido, não pra auditoria. Se não sobrevive a uma segunda-feira cheia, não é processo. É decoração.` },
+Hoje eu escrevo processo pensando no dia corrido, não no relatório bonito. Se ele não sobrevive a uma segunda-feira cheia, é só decoração.` },
 
   // ===================== [1B] COM PROVA — dados reais da operação (anonimizado) =====================
   // REGRA: nunca nomear a FG; sistemas descritos por função (não codinome); só números
@@ -202,7 +202,7 @@ Ele atende no WhatsApp por áudio, entende o que o cliente fala e responde falan
 
 E o número que importa: de cada dez contratos que ele envia, seis a sete são assinados. Onze minutos entre o link e a assinatura.
 
-A lição não é sobre chatbot. É sobre onde a IA gera valor de verdade. Não é a que responde pergunta. É a que fecha o ciclo — leva do primeiro "oi" ao contrato assinado sem passar por uma pessoa no meio.
+A lição vale pra qualquer operação: a IA gera valor de verdade quando fecha o ciclo — leva do primeiro "oi" ao contrato assinado sem passar por uma pessoa no meio.
 
 Atendimento vira operação quando a máquina não só conversa. Ela conclui.` },
 
@@ -218,13 +218,13 @@ Isso mudou a minha triagem. O dado deixou de ser um relatório do que já passou
 Todo mundo tem dashboard. O que conta é deixar o dado mudar a sua decisão.` },
 
   { t: "PROVA · Minha IA não consegue inventar jurisprudência", p: "▶ P3 · Prova (anti-alucinação) · ~50s", x:
-`A IA que escreve as minhas peças não consegue inventar jurisprudência. E isso não é sorte, é arquitetura.
+`A IA que escreve as minhas peças não consegue inventar jurisprudência. E isso foi desenhado assim, de propósito.
 
 O medo de todo mundo é o mesmo: a IA cita uma súmula que não existe e alguém protocola. Eu não resolvi isso pedindo pro modelo "por favor, não invente". Pedido não segura nada.
 
 Eu resolvi construindo uma parede. A redação só pode puxar de um banco curado por mim: seiscentas e trinta e seis normas reais e duzentos argumentos jurídicos estruturados. Qualquer citação fora desse pool é barrada automaticamente e conferida contra a fonte. Jurisprudência inventada é impossível por construção — não improvável, impossível.
 
-É a diferença entre confiar no modelo e desenhar o sistema onde o erro não cabe. Anti-alucinação não é um prompt caprichado. É uma parede que a IA não atravessa.` },
+Eu não confio no modelo pra se comportar sozinho. Eu desenho o sistema onde o erro não cabe. Anti-alucinação de verdade é uma parede — a IA simplesmente não tem por onde passar.` },
 
   { t: "PROVA · R$ 0,00 de diferença", p: "▶ P4 · Prova (auditável) · ~50s", x:
 `Eu prefiro uma IA que deixa rastro a uma que promete não errar. E agora eu tenho o número disso.
@@ -251,11 +251,11 @@ O trabalho não some. Ele sobe de nível — do braço pra cabeça.` },
 
 A maioria dos chatbots te obriga a ler um menu e escolher a opção três. O meu faz o contrário: escuta o áudio que a pessoa manda — do jeito que ela fala, corrido, com "é… deixa eu ver" — e responde em áudio, com voz neural. Não aquela voz de robô de operadora.
 
-Parece detalhe estético. Não é. No WhatsApp, a maior parte das pessoas manda áudio. Obrigar a digitar num menuzinho é atrito puro — e atrito derruba conversa.
+Parece só um detalhe estético, mas pesa muito. No WhatsApp, a maior parte das pessoas manda áudio. Obrigar a digitar num menuzinho é atrito puro — e atrito derruba conversa.
 
 Quando a IA encontra a pessoa no canal dela e no formato dela, a qualificação acontece sem parecer interrogatório. Vira conversa.
 
-Tecnologia boa não força a pessoa a se adaptar a ela. Ela se adapta à pessoa. O resto é a empresa terceirizando o próprio trabalho pro cliente.` },
+Tecnologia boa se adapta à pessoa. Quando é o contrário, a empresa está terceirizando o próprio trabalho pro cliente.` },
 
   { t: "PROVA · O cliente nunca pergunta 'cadê meu processo'", p: "▶ P7 · Prova (suporte proativo) · ~52s", x:
 `Eu construí uma esteira inteira com um objetivo só: o cliente nunca precisar perguntar "e o meu processo?".
@@ -264,12 +264,12 @@ Cada marco vira mensagem automática, na hora certa: protocolo, perícia, senten
 
 Demorei pra entender uma coisa: a pergunta "cadê meu processo" quase nunca é sobre informação. É sobre ansiedade. E toda vez que o cliente precisa perguntar, a relação já falhou um pouquinho antes.
 
-Suporte bom não é o que responde rápido. É o que chega antes da pergunta.
+Suporte bom chega antes da pergunta. Responder rápido é o mínimo — o bom é o cliente nem precisar perguntar.
 
 A maioria das operações mede quão rápido responde. Eu prefiro medir quantas perguntas deixaram de existir.` },
 
   { t: "PROVA · Na dúvida, não dispara", p: "▶ P8 · Prova (guardrail) · ~50s", x:
-`A regra mais importante do meu sistema de avisos não é sobre quando ele fala. É sobre quando ele fica calado.
+`A regra mais importante do meu sistema de avisos é sobre quando ele fica calado.
 
 Um exemplo: o aviso de trânsito em julgado, aquele "acabou, ganhamos", só sai se a decisão foi mesmo favorável — o sistema confere na base antes de mandar. Se tem qualquer ambiguidade, ele não dispara. Trava e chama um humano.
 
@@ -277,7 +277,7 @@ Parece pouco. É o que separa produção de demonstração.
 
 Porque uma mensagem errada pro cliente — um "parabéns, você ganhou" num caso que na verdade perdeu — custa muito mais caro que dez avisos que não saíram. O silêncio é reversível. A mensagem errada, não.
 
-Automação madura não é a que fala mais. É a que sabe a hora de calar. "Na dúvida, não dispara" devia estar escrito na parede de todo projeto de IA.` },
+Automação madura sabe a hora de calar. "Na dúvida, não dispara" devia estar escrito na parede de todo projeto de IA.` },
 
   { t: "PROVA · A cobrança que se cancela sozinha", p: "▶ P9 · Prova (automação que termina) · ~50s", x:
 `A automação que eu mais tenho orgulho é uma que se desliga sozinha.
@@ -326,16 +326,16 @@ Da próxima vez que te venderem um por cento mágico, faz uma pergunta só: por 
 
 Se toda decisão passa por você, você não é o líder do processo — é o pedágio dele. O time trava esperando seu aval, e você vira o teto do que a operação entrega.
 
-Delegar não é perder controle. É parar de ser o funil.
+Delegar é parar de ser o funil. É assim que a operação ganha vazão.
 
 Onde a sua operação para quando você tira uma semana de férias? É ali que você precisa agir primeiro.` },
 
   { t: "A IA não te demite", p: "Story 2 · IG · ~22s", x:
 `A IA não vai chegar te demitindo. O que ela faz, no silêncio, é mudar o que faz sentido uma pessoa fazer.
 
-Então o risco não é ser trocado por uma máquina. É ser trocado por alguém que aprendeu a dirigir a máquina.
+O verdadeiro risco é ser trocado por alguém que aprendeu a dirigir a máquina.
 
-A pergunta não é se a IA vai tirar o seu emprego. É se você vai ser quem manda nela — ou quem disputa espaço com ela.
+A pergunta que importa é: você vai ser quem manda nela, ou quem disputa espaço com ela?
 
 E isso é uma escolha que dá pra fazer hoje.` },
 
@@ -407,9 +407,9 @@ Antes de automatizar ou acelerar qualquer coisa, a pergunta é: e se a gente sim
 
 Não quem vai usar. Quem vai perceber quando quebrar, ajustar quando o processo mudar, responder quando der ruim.
 
-Ferramenta sem dono não é investimento. É abandono com mensalidade.` },
+Ferramenta sem dono é abandono com mensalidade.` },
 
-  { t: "IA não é projeto, é rotina", p: "Story 11 · IG · ~20s", x:
+  { t: "IA morre quando vira projeto", p: "Story 11 · IG · ~20s", x:
 `O jeito mais garantido de fracassar com IA: tratar como projeto. Projeto tem começo, meio e fim — aí acaba a verba, o time desmonta e a ferramenta fica órfã.
 
 IA que funciona é rotina: alguém olha toda semana, ajusta, melhora um pouco.
@@ -430,12 +430,12 @@ Toda vez que ela classifica uma intimação, o jurista concorda ou discorda. Cad
 
 A IA não substituiu o jurista. Ela aprende com ele todo dia. E esse histórico de correção é um ativo que concorrente nenhum tem.` },
 
-  { t: "PROVA · O lead não estava perdido, estava esquecido", p: "Story P8 · IG · ~20s", x:
+  { t: "PROVA · O lead esquecido volta sozinho", p: "Story P8 · IG · ~20s", x:
 `Um robô meu recupera cliente que sumiu no meio da conversa.
 
 Um scanner varre as conversas paradas e reengaja — com limite, sem bombardear ninguém. Gente que abandonou bem na hora de mandar o documento volta pro fluxo sozinha.
 
-Porque o lead que sumiu quase nunca disse não. Ele só foi esquecido. Follow-up não é insistência. É memória.` },
+Porque o lead que sumiu quase nunca disse não. Ele só foi esquecido. Um bom follow-up é pura memória — lembra de quem o sistema deixou pra trás.` },
 
   // ===================== [3] RESERVA — tema já postado como texto no LinkedIn (usar só como Reel no IG, se quiser) =====================
 
@@ -480,7 +480,7 @@ Padronizar é responder, em uma página, três coisas: qual é a entrada, qual �
 Por isso eu só viro automação quando alguém novo consegue executar lendo a régua, sem perguntar pra ninguém. E o seu processo-chave: depende de um documento, ou da cabeça de uma pessoa?` },
 
   { t: "Produtividade não é fazer mais rápido", p: "reserva · texto já saiu · ~38s", x:
-`Produtividade não é fazer mais rápido. É parar de fazer o que não devia.
+`Produtividade de verdade começa com uma subtração: parar de fazer o que nem devia existir.
 
 A gente compra ferramenta pra acelerar uma tarefa que, no fundo, nem precisava existir. Então, antes de acelerar qualquer coisa, eu paro e pergunto: e se a gente simplesmente parasse de fazer isso?
 
@@ -504,12 +504,12 @@ Porque tempo economizado some. Se a pessoa pega esse tempo livre e enche com out
 
 O que eu meço de verdade são três coisas: a fila diminuiu? O erro caiu? E a pessoa foi pra uma tarefa de mais valor? Se a automação não mexeu em fila, erro ou realocação, foi brinquedo caro.
 
-No fim, economizou tempo é sensação. Fila, erro e realocação: isso sim é resultado.` },
+No fim, 'economizou tempo' é só sensação. O que vira resultado é fila menor, erro menor e gente em trabalho de mais valor.` },
 
   { t: "A pergunta errada sobre IA", p: "reserva · ~40s", x:
 `Todo mundo pergunta se a IA vai tirar o emprego. E essa é a pergunta errada.
 
-Porque a IA não chega te demitindo. O que ela faz, no silêncio, é mudar o que faz sentido uma pessoa fazer. Então o risco não é a máquina — é quem aprendeu a dirigir a máquina.
+Porque a IA não chega te demitindo. O que ela faz, no silêncio, é mudar o que faz sentido uma pessoa fazer. Então o verdadeiro risco tem nome: é quem aprendeu a dirigir a máquina.
 
 E tem dois grupos se formando. Um trata a IA como ameaça e tenta competir com ela na velocidade; o outro trata como alavanca e usa pra fazer o que antes não cabia no dia. O primeiro perde, e não pra IA: perde pro segundo grupo.
 
