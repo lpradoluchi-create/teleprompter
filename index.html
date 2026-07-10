@@ -49,6 +49,8 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 .sheet{position:fixed;inset:0;z-index:9;background:rgba(4,14,15,.98);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top) + 18px) 16px 16px;}
 .sheet h2{font-size:20px;font-weight:900;}
 .sheet .sub{font-size:13px;color:#9fb0af;margin:3px 0 14px;}
+.closeX{position:absolute;top:calc(env(safe-area-inset-top) + 14px);right:14px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2;}
+.closeX:active{transform:scale(.94);}
 .tag{font-size:11px;color:var(--gold-lt);font-weight:800;letter-spacing:1px;}
 .rlist{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;-webkit-overflow-scrolling:touch;}
 .rcard{background:#0c1a1b;border:1px solid rgba(157,124,73,.32);border-radius:14px;padding:15px 16px;}
@@ -102,6 +104,7 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 
 <!-- MENU DE ROTEIROS -->
 <div class="sheet" id="menu">
+  <button class="closeX" id="menuClose" aria-label="fechar">✕</button>
   <span class="tag">TELEPROMPTER</span>
   <h2>Escolha o roteiro</h2>
   <div class="sub">Toque num roteiro pra carregar. O texto rola na sua tela; não aparece no vídeo.</div>
@@ -239,11 +242,41 @@ function toast(m){ $('#toast').textContent=m; }
 function download(){ const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=lastFile.name; document.body.appendChild(a); a.click(); a.remove(); toast('✓ Vídeo salvo: '+lastFile.name+' (pasta Downloads)'); }
 $('#dl').onclick=download;
 $('#share').onclick=async()=>{
-  try{
-    if(navigator.canShare && lastFile && navigator.canShare({files:[lastFile]})){ await navigator.share({files:[lastFile],title:'Vídeo'}); toast('✓ Compartilhado.'); return; }
-  }catch(e){ toast('Compartilhamento cancelado. Toque em Baixar.'); return; }
-  download(); // desktop ou sem share nativo → baixa
+  if(!blob||!lastFile){ toast('Grave um vídeo primeiro.'); return; }
+  // 1) share nativo de ARQUIVO (Android/iOS): abre a folha do sistema (WhatsApp, Drive, etc.)
+  if(navigator.share && navigator.canShare && navigator.canShare({files:[lastFile]})){
+    try{ await navigator.share({files:[lastFile]}); toast('✓ Enviado.'); }
+    catch(e){
+      if(e && e.name==='AbortError'){ toast(''); }                 // usuário fechou a folha: silêncio
+      else { toast('Não deu pra compartilhar aqui — baixando…'); download(); }
+    }
+    return;
+  }
+  // 2) navegador não compartilha vídeo direto (desktop / sem Web Share de arquivo) → baixa
+  toast('Seu navegador não compartilha vídeo direto — baixando…');
+  download();
 };
+
+// ---- botão Voltar (Android) + fechar menu ----
+// Sem isso, o Voltar do Android fechava a página inteira. Agora ele alterna:
+// gravando → abre os roteiros; roteiros/editor/review aberto → fecha e volta pra câmera.
+function anyOverlayOpen(){
+  return !$('#menu').classList.contains('hidden')
+      || !$('#editor').classList.contains('hidden')
+      || $('#review').style.display==='flex';
+}
+function hideOverlays(){
+  $('#menu').classList.add('hidden'); $('#editor').classList.add('hidden');
+  $('#review').style.display='none'; $('#toast').textContent='';
+}
+function openMenu(){ setPlay(false); if(HAS_ROTEIROS){ $('#menu').classList.remove('hidden'); } else { openPaste(); } }
+$('#menuClose').onclick=hideOverlays;
+history.pushState({tp:1},'');                          // sentinela: nunca deixa o histórico esvaziar
+window.addEventListener('popstate',()=>{
+  history.pushState({tp:1},'');                        // re-arma — o Voltar nunca fecha o app sem querer
+  if(anyOverlayOpen()) hideOverlays();                 // algo aberto → fecha (volta pra câmera)
+  else openMenu();                                     // gravando → reabre os roteiros
+});
 
 // ---- init ----
 textEl.style.fontSize='34px'; loop(); initCam(curMic);

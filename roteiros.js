@@ -25,15 +25,15 @@ Por que isso muda o jogo? Porque agente bom era caro demais pra rodar o dia inte
 Foi sempre assim com tecnologia. A virada não acontece quando fica possível. Acontece quando fica barato.` },
 
   { t: "Sistemas > Gênios", p: "▶ 2 · Pilar 2 · B2 · ~50s", x:
-`Todo mundo quer contratar o gênio. Eu prefiro construir o sistema.
+`Durante muito tempo eu fui a peça que não podia faltar — e demorei pra enxergar o risco que isso era.
 
-O gênio resolve o problema de hoje, e leva a solução embora quando tira férias ou pede demissão. O sistema resolve o problema de novo amanhã, com qualquer pessoa executando.
+Uma operação que só funciona porque uma pessoa específica é excepcional está confundindo talento com processo. E talento tira férias, adoece, um dia vai embora. No dia em que essa pessoa falta, tudo trava junto — porque o que ela sabia nunca virou sistema, ficou na cabeça dela.
 
-Se a sua operação só funciona porque uma pessoa específica é excepcional, você não tem um processo. Tem um ponto único de falha muito talentoso.
+Então eu virei a chave. Cada coisa que só eu dava conta de fazer, eu transformei num processo que qualquer um da equipe executa. Doeu no ego no começo — até eu entender que continuar insubstituível me tornava o teto da própria operação.
 
-O trabalho de quem lidera não é ser o gênio. É construir o sistema que dispensa o gênio.
+A pessoa mais valiosa de um time é a que constrói o sistema capaz de rodar sem ela.
 
-Você está dependendo de sistemas, ou de heróis?` },
+Você está construindo algo que depende de você — ou algo que te liberta?` },
 
   { t: "O erro de automatizar 100%", p: "▶ 3 · Pilar 1 · B2 · ~50s", x:
 `Automatizar cem por cento de um processo é quase sempre um erro. E parece o oposto do que eu deveria dizer.
