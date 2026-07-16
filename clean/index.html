@@ -22,11 +22,6 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 #prompt.mir #scriptText{transform:scaleX(-1);}
 #scriptText{padding:20vh 22px 40vh;font-weight:800;font-size:34px;line-height:1.45;text-shadow:0 2px 10px rgba(0,0,0,.85);white-space:pre-wrap;}
 #readline{position:fixed;top:calc(46vh * .32);left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(157,124,73,.9),transparent);z-index:3;opacity:.5;pointer-events:none;}
-#guide{position:fixed;left:0;right:0;z-index:3;pointer-events:none;display:none;border-top:1.5px dashed rgba(198,165,107,.6);border-bottom:1.5px dashed rgba(198,165,107,.6);}
-#guide::after{content:"16:9";position:absolute;right:8px;top:4px;font-size:10px;font-weight:800;color:rgba(198,165,107,.75);letter-spacing:1px;}
-#dualBtn{color:var(--gold-lt);cursor:pointer;}
-#dualBtn.off{opacity:.45;color:#fff;}
-.btn.s.sel{border-color:var(--gold);color:var(--gold-lt);}
 
 .top{position:fixed;top:0;left:0;right:0;z-index:6;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top) + 10px) 14px 10px;gap:8px;pointer-events:none;}
 .pill{pointer-events:auto;background:rgba(0,0,0,.5);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:8px 13px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;}
@@ -81,14 +76,12 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 </head>
 <body>
 <video id="cam" class="mir" autoplay playsinline muted></video>
-<div id="guide"></div>
 <div id="readline"></div>
 <div id="prompt"><div id="scriptText"></div></div>
 
 <div class="top">
   <div class="pill" id="status"><span class="rec-dot"></span><span id="statusTxt">pronto</span></div>
   <div class="pill" id="res">—</div>
-  <div class="pill" id="dualBtn" title="gravar também 16:9">+16:9</div>
   <div class="pill hidden" id="timer">00:00</div>
 </div>
 
@@ -129,10 +122,6 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 <div id="review">
   <span class="tag">GRAVAÇÃO</span>
   <h2>Sua gravação <span id="revRes" style="color:var(--gold-lt);font-size:14px"></span></h2>
-  <div class="erow hidden" id="fmtRow" style="margin-top:10px">
-    <button class="btn s sel" id="fmtV">9:16 Vertical</button>
-    <button class="btn s" id="fmtH">16:9 Horizontal</button>
-  </div>
   <video id="playback" controls playsinline></video>
   <div class="erow"><button class="btn s" id="again">Regravar</button><button class="btn s" id="dl">⬇ Baixar</button><button class="btn p" id="share">Compartilhar</button></div>
   <div id="toast" style="text-align:center;font-size:13px;color:#8fe0b0;margin-top:10px;min-height:18px"></div>
@@ -146,9 +135,6 @@ html,body{height:100%;overflow:hidden;background:#000;font-family:var(--font);co
 const $=s=>document.querySelector(s);
 const cam=$('#cam'), promptEl=$('#prompt'), textEl=$('#scriptText');
 let stream, rec, chunks=[], scrolling=false, recording=false, t0=0, tint=null, blob=null, lastFile=null, resLabel='—';
-// modo DuoShot: 2º MediaRecorder grava o crop 16:9 do mesmo stream via canvas (o master vertical fica intocado)
-let stream2=null, rec2=null, chunks2=[], blob2=null, lastFile2=null, rec2done=null, drawing=false, resH='—', revSel='v', lastExt='mp4';
-let dualOn = localStorage.getItem('tp_dual')!=='0';
 const LS='tp_script_v1';
 
 // ---- câmera ----
@@ -158,7 +144,7 @@ async function initCam(micId){
     const audio={echoCancellation:false, noiseSuppression:false, autoGainControl:false, sampleRate:48000};
     if(micId) audio.deviceId={exact:micId};                   // força o microfone escolhido (ex: lapela)
     stream = await navigator.mediaDevices.getUserMedia({
-      video:{facingMode:'user', width:{ideal:3840}, height:{ideal:2160}, frameRate:{ideal:30}},  // ideal alto = melhor resolução que a câmera der (crop 16:9 agradece)
+      video:{facingMode:'user', width:{ideal:1920}, height:{ideal:1080}, frameRate:{ideal:30}},
       audio
     });
     cam.srcObject=stream;
@@ -166,8 +152,6 @@ async function initCam(micId){
     const h=Math.min(s.width||0,s.height||0);            // menor lado = "linhas" no vertical
     resLabel = h?`${h}p`:'—';
     $('#res').textContent = resLabel + (s.frameRate?` · ${Math.round(s.frameRate)}fps`:'');
-    try{ const c=stream.getVideoTracks()[0].getCapabilities&&stream.getVideoTracks()[0].getCapabilities();
-      if(c) console.log('[tp] camera caps', JSON.stringify({w:c.width,h:c.height,fps:c.frameRate})); }catch(e){}
     listMics();                                          // atualiza a lista (labels só vêm após permissão)
   }catch(e){
     if(micId){ curMic=''; localStorage.removeItem('tp_mic'); return initCam(); }  // mic sumiu → volta pro padrão
@@ -229,96 +213,39 @@ $('#save').onclick=()=>{ useText($('#script').value); };
 function pickMime(){ for(const m of ['video/mp4;codecs=h264,aac','video/mp4','video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/webm']) if(window.MediaRecorder&&MediaRecorder.isTypeSupported(m)) return m; return ''; }
 function fmt(s){ return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
 async function countdown(){ const el=$('#count'),b=el.querySelector('b'); for(let i=3;i>=1;i--){ b.textContent=i; el.style.display='flex'; await new Promise(r=>setTimeout(r,750)); } el.style.display='none'; }
-// modo DuoShot: canvas desenha o crop central 16:9 de cada frame do master e um 2º recorder grava esse stream.
-// Qualquer erro aqui NUNCA derruba o master — falhou, grava só o vertical (como sempre foi).
-function startDual(mime){
-  rec2=null; rec2done=null; chunks2=[];
-  if(!dualOn || !(cam.videoHeight>cam.videoWidth)) return;
-  try{
-    const vw=cam.videoWidth, vh=cam.videoHeight;
-    const cw=vw, ch=Math.floor(vw*9/16/2)*2, sy=Math.floor((vh-ch)/2);  // faixa 16:9 no centro do quadro vertical (altura par p/ o encoder)
-    const cvs=document.createElement('canvas'); cvs.width=cw; cvs.height=ch;
-    const ctx=cvs.getContext('2d');
-    drawing=true;
-    const step=()=>{ if(!drawing) return; ctx.drawImage(cam,0,sy,cw,ch,0,0,cw,ch);
-      cam.requestVideoFrameCallback? cam.requestVideoFrameCallback(step) : requestAnimationFrame(step); };
-    step();
-    stream2=cvs.captureStream(30);
-    const at=stream.getAudioTracks()[0]; if(at) stream2.addTrack(at.clone());   // mesmo áudio nos dois arquivos
-    rec2 = mime? new MediaRecorder(stream2,{mimeType:mime,videoBitsPerSecond:6_000_000,audioBitsPerSecond:192000}) : new MediaRecorder(stream2);
-    rec2.ondataavailable=e=>{ if(e.data.size) chunks2.push(e.data); };
-    rec2done=new Promise(res=>{ rec2.onstop=res; });
-    rec2.start();
-    resH=ch+'p';
-  }catch(e){ console.warn('[tp] 16:9 derivado indisponível — gravando só o vertical.',e); stopDual(); rec2=null; }
-}
-function stopDual(){ drawing=false; if(stream2){ stream2.getTracks().forEach(t=>t.stop()); stream2=null; } }
 async function startRec(){
   if(!stream) return; const mime=pickMime(); await countdown(); chunks=[];
   try{ rec = mime? new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:10_000_000,audioBitsPerSecond:192000}) : new MediaRecorder(stream); }
   catch(e){ rec=new MediaRecorder(stream); }
   rec.ondataavailable=e=>{ if(e.data.size) chunks.push(e.data); };
   rec.onstop=finishRec; rec.start();
-  startDual(mime);
-  recording=true; document.body.classList.add('recording'); $('#statusTxt').textContent=rec2?'gravando 2×':'gravando';
+  recording=true; document.body.classList.add('recording'); $('#statusTxt').textContent='gravando';
   $('#timer').classList.remove('hidden'); t0=Date.now(); tint=setInterval(()=>$('#timer').textContent=fmt(Math.floor((Date.now()-t0)/1000)),500);
   promptEl.scrollTop=0; setPlay(true);
 }
-function stopRec(){ if(!recording) return; if(rec2){ try{ rec2.stop(); }catch(e){} } if(rec) rec.stop(); }
-async function finishRec(){
+function stopRec(){ if(rec&&recording) rec.stop(); }
+function finishRec(){
   recording=false; document.body.classList.remove('recording'); setPlay(false); clearInterval(tint);
   $('#statusTxt').textContent='pronto'; $('#timer').classList.add('hidden');
-  const type=(rec&&rec.mimeType)||'video/webm', ext=type.includes('mp4')?'mp4':'webm'; lastExt=ext;
-  if(rec2done){ await Promise.race([rec2done, new Promise(r=>setTimeout(r,4000))]); }  // espera o 16:9 fechar (com teto)
-  stopDual();
-  const ts=Date.now(), dual=chunks2.length>0;
-  blob=new Blob(chunks,{type}); lastFile=new File([blob],`video-${dual?'vertical-':''}${ts}.${ext}`,{type});
-  if(dual){ blob2=new Blob(chunks2,{type}); lastFile2=new File([blob2],`video-horizontal-${ts}.${ext}`,{type}); }
-  else{ blob2=null; lastFile2=null; }
-  $('#fmtRow').classList.toggle('hidden',!dual);
-  showRev('v');
+  const type=(rec&&rec.mimeType)||'video/webm', ext=type.includes('mp4')?'mp4':'webm';
+  blob=new Blob(chunks,{type}); lastFile=new File([blob],`video-${Date.now()}.${ext}`,{type});
+  $('#playback').src=URL.createObjectURL(blob); $('#revRes').textContent=resLabel+' · '+ext.toUpperCase();
   $('#review').style.display='flex';
 }
-function showRev(which){
-  revSel=which;
-  $('#fmtV').classList.toggle('sel',which==='v'); $('#fmtH').classList.toggle('sel',which==='h');
-  $('#playback').src=URL.createObjectURL(which==='h'?blob2:blob);
-  $('#revRes').textContent=(which==='h'?resH:resLabel)+' · '+lastExt.toUpperCase();
-}
-$('#fmtV').onclick=()=>showRev('v');
-$('#fmtH').onclick=()=>{ if(blob2) showRev('h'); };
-function curFile(){ return (revSel==='h'&&lastFile2)? {b:blob2,f:lastFile2} : {b:blob,f:lastFile}; }
 $('#rec').onclick=()=> recording? stopRec() : startRec();
 $('#again').onclick=()=>{ $('#review').style.display='none'; $('#toast').textContent=''; };
 function toast(m){ $('#toast').textContent=m; }
-function download(){ const {b,f}=curFile(); const url=URL.createObjectURL(b); const a=document.createElement('a'); a.href=url; a.download=f.name; document.body.appendChild(a); a.click(); a.remove(); toast('✓ Vídeo salvo: '+f.name+' (pasta Downloads)'); }
+function download(){ const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download=lastFile.name; document.body.appendChild(a); a.click(); a.remove(); toast('✓ Vídeo salvo: '+lastFile.name+' (pasta Downloads)'); }
 $('#dl').onclick=download;
 $('#share').onclick=async()=>{
-  const {b,f}=curFile();
   try{
-    if(navigator.canShare && f && navigator.canShare({files:[f]})){ await navigator.share({files:[f],title:'Vídeo'}); toast('✓ Compartilhado.'); return; }
+    if(navigator.canShare && lastFile && navigator.canShare({files:[lastFile]})){ await navigator.share({files:[lastFile],title:'Vídeo'}); toast('✓ Compartilhado.'); return; }
   }catch(e){ toast('Compartilhamento cancelado. Toque em Baixar.'); return; }
   download(); // desktop ou sem share nativo → baixa
 };
 
-// ---- linhas-guia 16:9 + toggle do modo duplo ----
-// a faixa marca, na tela, o que entra no corte horizontal: mantenha o rosto dentro dela.
-const guide=$('#guide'), dualBtn=$('#dualBtn');
-function updateGuide(){
-  const vw=cam.videoWidth, vh=cam.videoHeight;
-  if(!dualOn||!vw||!(vh>vw)){ guide.style.display='none'; return; }
-  const scale=Math.max(innerWidth/vw, innerHeight/vh);   // espelha o object-fit:cover do preview
-  const bandH=Math.floor(vw*9/16)*scale;
-  guide.style.height=bandH+'px'; guide.style.top=`calc(50% - ${bandH/2}px)`;
-  guide.style.display='block';
-}
-cam.addEventListener('loadedmetadata',updateGuide);
-window.addEventListener('resize',updateGuide);
-function syncDual(){ dualBtn.classList.toggle('off',!dualOn); updateGuide(); }
-dualBtn.onclick=()=>{ if(recording) return; dualOn=!dualOn; localStorage.setItem('tp_dual',dualOn?'1':'0'); syncDual(); };
-
 // ---- init ----
-textEl.style.fontSize='34px'; loop(); initCam(curMic); syncDual();
+textEl.style.fontSize='34px'; loop(); initCam(curMic);
 if(!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia)) fatal('Sem suporte','Use o Google Chrome atualizado no Android.');
 if(!HAS_ROTEIROS){ $('#menu').classList.add('hidden'); openPaste(); }  // versão limpa (sem roteiros.js): abre direto no editor
 </script>
