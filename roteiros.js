@@ -24,15 +24,21 @@ Por que isso muda o jogo? Porque agente bom era caro demais pra rodar o dia inte
 Foi sempre assim com tecnologia. A virada não acontece quando fica possível. Acontece quando fica barato.` },
 
   { t: "Sistemas > Gênios", p: "▶ 2 · Pilar 2 · B2 · ~42s", x:
-`Eu já quis ser a pessoa que resolve tudo. Hoje, eu vejo isso como um risco.
+`Toda operação tem alguém que segura tudo sozinho.
 
-Se a operação só anda quando eu estou por perto, ela ficou dependente de mim. E dependência não escala. Ela quebra no primeiro dia que eu falto.
+Já fui essa pessoa. E descobri que isso não é elogio.
 
-Então eu mudei. Parei de guardar o que só eu sabia. Comecei a transformar cada tarefa num passo a passo que qualquer um da equipe segue.
+O gênio resolve o problema de hoje. Quando tira férias ou pede demissão, a solução vai embora junto.
 
-Hoje, eu durmo tranquilo quando vejo tudo rodar sem mim.
+O sistema resolve o problema de novo amanhã, com qualquer pessoa executando.
 
-E você? Quer ser necessário, ou quer construir algo que anda sem você?` },
+Se a operação só funciona porque alguém específico é excepcional, existe ali um ponto único de falha muito talentoso.
+
+O trabalho de quem lidera é construir o sistema que funciona sem herói. Inclusive sem a gente.
+
+Você depende de sistemas ou de heróis?
+
+Sigo falando de operação e sistemas por aqui. Me segue pra acompanhar.` },
 
   { t: "O erro de automatizar 100%", p: "▶ 3 · Pilar 1 · B2 · ~50s", x:
 `Automatizar cem por cento de um processo é quase sempre um erro. E parece o oposto do que eu deveria dizer.
@@ -55,31 +61,37 @@ E quando alguém perguntar "como isso foi decidido?", a diferença entre quem re
 Auditável vale mais que infalível.` },
 
   { t: "O que é um agente de IA", p: "▶ 5 · Conceito · B1 · ~45s", x:
-`Todo mundo fala em agente de IA agora, mas a maioria está descrevendo um chatbot. E não é a mesma coisa.
+`Tem muito chatbot sendo vendido como agente de IA.
 
-Um chatbot responde. Você pergunta, ele devolve texto, e para por aí. Um agente age. Você dá um objetivo e ele decide os passos, usa ferramentas, executa, confere o resultado e corrige o rumo sozinho, sem você conduzir cada etapa.
+Um chatbot responde. Você pergunta, ele devolve texto, e acabou. Um agente age. Você dá um objetivo. Ele decide os passos. Usa ferramentas. Executa, confere o resultado e corrige o rumo sozinho. Sem você conduzir cada etapa.
 
-A diferença prática é essa: o chatbot te ajuda a fazer a tarefa; o agente faz a tarefa e te entrega o resultado. É a passagem da IA que fala pra IA que trabalha.
+Na prática, o chatbot te ajuda a fazer a tarefa. O agente faz a tarefa e te entrega o resultado. É a passagem da IA que fala pra IA que trabalha.
 
-Antes de contratar qualquer agente, pergunte uma coisa: ele só responde, ou ele resolve?` },
+Antes de contratar qualquer agente, pergunta uma coisa: ele só responde, ou ele resolve?
+
+Me segue pra acompanhar como eu uso isso na prática.` },
 
   { t: "O que são skills", p: "▶ 6 · Conceito · B1 · ~45s", x:
-`A pergunta que mais me fazem agora: qual a diferença entre a IA conversar e a IA fazer? A resposta tem um nome. Skill.
+`Toda IA conversa. Pouca IA executa. E a diferença entre uma coisa e outra tem nome: skill.
 
-Uma skill é uma habilidade específica que você ensina pro modelo. É procedimento na veia. É pegar uma tarefa que a sua operação faz do mesmo jeito toda vez e transformar num passo a passo que a IA executa sob demanda, sozinha.
+Uma skill é uma habilidade específica que você ensina pro modelo. Você pega uma tarefa que a sua operação faz do mesmo jeito toda vez. Transforma num passo a passo. E a IA passa a executar sozinha, sob demanda.
 
-E o pulo do gato é que a skill só carrega quando é preciso. A IA não fica com mil instruções na cabeça o tempo todo; ela puxa a habilidade certa na hora certa.
+O pulo do gato é que a skill só carrega quando é preciso. A IA não fica com mil instruções na cabeça o tempo todo. Ela puxa a habilidade certa na hora certa.
 
-É a diferença entre um assistente que sabe tudo mais ou menos e um especialista que faz uma coisa muito bem. Skill é a IA passando de saber sobre pra saber fazer.` },
+No fim, é a diferença entre um assistente que sabe tudo pela metade e um especialista que faz uma coisa muito bem.
+
+Eu sigo destrinchando operação jurídica com IA por aqui. Me segue pra acompanhar.` },
 
   { t: "MCP: a IA deixa de ser uma ilha", p: "▶ 7 · Conceito · B1 · ~48s", x:
-`Durante muito tempo a IA foi uma ilha. Ela era inteligente, mas não conseguia tocar em nada: não abria o seu sistema, não puxava o seu dado, não executava nada no mundo real. Você era o cabo entre a IA e as ferramentas, copiando e colando o dia inteiro.
+`Durante muito tempo, a IA foi uma ilha. Inteligente, mas sem tocar em nada. Ela não abria o seu sistema nem puxava o seu dado. Executar alguma coisa no mundo real, então, nem pensar. Você era o cabo entre a IA e as ferramentas, copiando e colando o dia inteiro.
 
 O que mudou isso tem um nome técnico, MCP, mas a ideia é simples. É uma tomada padrão que conecta a IA às suas ferramentas.
 
 Com ela, a IA para de só falar sobre o trabalho e passa a fazer o trabalho: consultar, preencher, disparar, dentro dos sistemas que você já usa.
 
-É a diferença entre um consultor que te dá conselho e um que senta e opera. E é aí que a IA deixa de ser demonstração e vira operação.` },
+É a diferença entre um consultor que te dá conselho e um que senta e opera. A partir daí, a IA sai da demonstração e entra na operação.
+
+Eu mostro esse tipo de conexão na prática por aqui. Me segue pra acompanhar.` },
 
   { t: "A ferramenta não conserta o processo", p: "▶ 8 · Pilar 1 · B2 · ~48s", x:
 `A ferramenta nova não vai consertar o seu processo. Esse é um dos erros mais caros que eu vejo.
@@ -155,13 +167,15 @@ Então fica a pergunta: a sua operação está crescendo sob controle, ou só es
   { t: "Premiar quem usa IA foi o erro", p: "▶ 15 · Pilar 4 · B2 · ~50s", x:
 `Algumas das maiores empresas do mundo premiaram quem mais usava IA. E deu muito ruim.
 
-A Amazon e a Meta criaram rankings internos de uso de IA. E o que aconteceu? Gente rodando robô em tarefa inútil só pra subir no placar, com o custo explodindo e valor real nenhum. As duas acabaram desligando os rankings.
+A Amazon e a Meta criaram rankings internos de uso de IA. E o que aconteceu? Gente rodando robô em tarefa inútil só pra subir no placar. Custo explodindo, valor real nenhum. As duas acabaram desligando os rankings.
 
-A Uber, por exemplo, estourou o orçamento de IA do ano inteiro em só quatro meses. Hoje ela limita quanto cada funcionário pode gastar com IA por mês.
+A Uber estourou o orçamento de IA do ano inteiro em só quatro meses. Hoje ela limita quanto cada funcionário pode gastar com IA por mês.
 
-E o problema nunca foi a IA. Foi a falta de governança: ninguém pôs limite de consumo, ninguém definiu métrica de valor, ninguém auditou o ROI. Porque medir quanto você usa é fácil; o que importa é medir se aquilo gerou resultado.
+E a IA nunca foi o problema. Faltou governança. Ninguém pôs limite de consumo, faltou métrica de valor e o ROI nunca foi auditado. Medir quanto você usa é fácil. O que importa é medir se aquilo gerou resultado.
 
-No fim, governança de IA é controle financeiro tanto quanto é ética. Então me diz: a sua empresa adotou IA, ou só abriu a torneira?` },
+No fim, governança de IA também é controle financeiro. Então me diz: a sua empresa adotou IA ou só abriu a torneira?
+
+Eu falo de IA aplicada à operação por aqui. Me segue.` },
 
   { t: "Toda automação é uma conta que chega depois", p: "▶ 16 · Pilar 1 · B2 · ~48s", x:
 `A automação que você cria hoje é uma conta que chega depois. E ninguém te avisa disso na hora de criar.
@@ -236,26 +250,32 @@ Mas o número que eu mais gosto é outro. Quando ele encontra um caso que não d
 O que protege a operação nunca foi a máquina ser perfeita. É ela saber onde não confiar em si mesma. E te deixar conferir cada passo.` },
 
   { t: "PROVA · O custo de produzir a peça: centavos", p: "▶ P5 · Prova (custo marginal) · ~50s", x:
-`A petição que a minha esteira produz custa centavos. Não é força de expressão — é o custo real de máquina de cada peça a mais.
+`A petição que a minha esteira produz custa centavos. Custo real de máquina, medido em cada peça a mais.
 
-A peça nasce dos documentos reais do caso, com o cálculo embutido, a jurisprudência verificada contra um banco curado e a formatação do escritório. E o humano entra no fim: revisa e protocola.
+A peça nasce dos documentos reais do caso. O cálculo já vem embutido. A jurisprudência é conferida num banco curado. A formatação sai no padrão do escritório. E o humano entra no fim: revisa e protocola.
 
 O que isso muda? O gargalo deixa de ser a redação e passa a ser só a revisão. A produção cresce sem a folha crescer junto.
 
-E aqui está a parte que quase ninguém enxerga: quando o custo de produzir cai pra perto de zero, o limite da operação para de ser "quantas peças a gente dá conta de escrever" e vira "quantas a gente consegue revisar com qualidade".
+Agora, a parte que quase ninguém enxerga. Quando o custo de produzir cai pra perto de zero, o limite da operação muda. Deixa de ser quantas peças a gente dá conta de escrever. Vira quantas a gente consegue revisar com qualidade.
 
-O trabalho não some. Ele sobe de nível — do braço pra cabeça.` },
+O trabalho não some. Ele sobe de nível, do braço pra cabeça.
+
+Segue aqui que eu vou mostrando essa esteira por dentro.` },
 
   { t: "PROVA · O atendimento que responde falando", p: "▶ P6 · Prova (voz/UX) · ~48s", x:
-`O meu atendimento não digita. Ele fala.
+`Manda um áudio pro meu atendimento. Ele responde falando.
 
-A maioria dos chatbots te obriga a ler um menu e escolher a opção três. O meu faz o contrário: escuta o áudio que a pessoa manda — do jeito que ela fala, corrido, com "é… deixa eu ver" — e responde em áudio, com voz neural. Não aquela voz de robô de operadora.
+A maioria dos chatbots te obriga a ler um menu e digitar a opção três. O meu escuta o áudio do jeito que a pessoa manda. Corrido, com "é... deixa eu ver" no meio. E responde em áudio, com voz neural. Nada de voz de robô de operadora.
 
-Parece só um detalhe estético, mas pesa muito. No WhatsApp, a maior parte das pessoas manda áudio. Obrigar a digitar num menuzinho é atrito puro — e atrito derruba conversa.
+Parece detalhe estético. Não é.
 
-Quando a IA encontra a pessoa no canal dela e no formato dela, a qualificação acontece sem parecer interrogatório. Vira conversa.
+No WhatsApp, a maior parte das pessoas manda áudio. Obrigar a digitar num menuzinho é atrito puro. E atrito derruba conversa.
 
-Tecnologia boa se adapta à pessoa. Quando é o contrário, a empresa está terceirizando o próprio trabalho pro cliente.` },
+Quando a IA encontra a pessoa no canal dela e no formato dela, a qualificação deixa de parecer interrogatório. Vira conversa.
+
+Tecnologia boa se adapta à pessoa, nunca o contrário. Quando é o cliente que se adapta, a empresa terceirizou o próprio trabalho pra ele.
+
+Sigo destrinchando operação jurídica com IA por aqui. Me segue pra acompanhar.` },
 
   { t: "PROVA · O cliente nunca pergunta 'cadê meu processo'", p: "▶ P7 · Prova (suporte proativo) · ~52s", x:
 `Eu construí uma esteira inteira com um objetivo só: o cliente nunca precisar perguntar "e o meu processo?".
@@ -280,15 +300,19 @@ Porque uma mensagem errada pro cliente — um "parabéns, você ganhou" num caso
 Automação madura sabe a hora de calar. "Na dúvida, não dispara" devia estar escrito na parede de todo projeto de IA.` },
 
   { t: "PROVA · A cobrança que se cancela sozinha", p: "▶ P9 · Prova (automação que termina) · ~50s", x:
-`A automação que eu mais tenho orgulho é uma que se desliga sozinha.
+`Construí uma automação que se desliga sozinha.
 
-Quando o juiz manda emendar o processo, a IA lê o despacho e separa só o que é obrigação do cliente entregar — ela tem uma lista do que é ônus do escritório e isso ela nunca cobra da pessoa. Aí ela pede o documento e agenda dois lembretes.
+Quando o juiz manda emendar o processo, a IA lê o despacho. Separa só o que é obrigação do cliente entregar. O que é ônus do escritório, ela nunca cobra da pessoa. Aí pede o documento e agenda dois lembretes.
 
-Mas o pulo do gato é o fim: no instante em que o documento chega, ela cancela os lembretes automaticamente. Ninguém fica cobrando quem já entregou.
+O pulo do gato é o fim. No instante em que o documento chega, ela cancela os lembretes automaticamente. Ninguém fica cobrando quem já entregou.
 
-Porque metade da raiva que as pessoas têm de robô vem exatamente disso: continuar cobrando depois que você já fez. O difícil na automação nunca foi ligar. Foi desligar na hora certa.
+Metade da raiva que a gente tem de robô vem daí. O robô que continua cobrando depois que você já fez.
 
-Automação madura sabe terminar. A que só sabe começar vira spam com o seu nome.` },
+Ligar uma automação é fácil. Difícil é fazer ela desligar na hora certa.
+
+Automação madura sabe terminar. A que só sabe começar vira spam com o seu nome.
+
+Sigo mostrando os bastidores dessa operação por aqui. Me segue pra acompanhar.` },
 
   { t: "PROVA · A IA que sabe que o prazo não é seu", p: "▶ P10 · Prova (acertar o 'não') · ~50s", x:
 `Eu ensinei uma IA a reconhecer um prazo que não é meu. E essa função vale mais que qualquer prazo que ela captura.
@@ -498,22 +522,22 @@ E o gargalo era outro. O tempo morria numa fila invisível, esperando uma aprova
 Porque opinião sobre o gargalo é barata, e quase sempre errada. Então meça antes de decidir.` },
 
   { t: "'Economizou tempo' não é resultado", p: "reserva · ~38s", x:
-`Economizou tempo é a resposta que todo mundo dá — e não prova nada.
+`"Economizou tempo" é a resposta que todo mundo dá. E não prova nada.
 
-Porque tempo economizado some. Se a pessoa pega esse tempo livre e enche com outra tarefa manual, você não ganhou nada — só trocou a fila de lugar.
+Porque tempo economizado some. Se a pessoa pega esse tempo livre e enche com outra tarefa manual, você não ganhou nada. Só trocou a fila de lugar.
 
 O que eu meço de verdade são três coisas: a fila diminuiu? O erro caiu? E a pessoa foi pra uma tarefa de mais valor? Se a automação não mexeu em fila, erro ou realocação, foi brinquedo caro.
 
-No fim, 'economizou tempo' é só sensação. O que vira resultado é fila menor, erro menor e gente em trabalho de mais valor.` },
+No fim, "economizou tempo" é sensação. Resultado é fila menor, menos erro e gente em tarefa de mais valor.` },
 
   { t: "A pergunta errada sobre IA", p: "reserva · ~40s", x:
 `Todo mundo pergunta se a IA vai tirar o emprego. E essa é a pergunta errada.
 
-Porque a IA não chega te demitindo. O que ela faz, no silêncio, é mudar o que faz sentido uma pessoa fazer. Então o verdadeiro risco tem nome: é quem aprendeu a dirigir a máquina.
+Porque a IA não chega te demitindo. O que ela faz, no silêncio, é mudar o que faz sentido uma pessoa fazer. E o risco passa a ser quem aprendeu a dirigir a máquina.
 
-E tem dois grupos se formando. Um trata a IA como ameaça e tenta competir com ela na velocidade; o outro trata como alavanca e usa pra fazer o que antes não cabia no dia. O primeiro perde, e não pra IA: perde pro segundo grupo.
+E tem dois grupos se formando. Um trata a IA como ameaça e tenta competir com ela na velocidade. O outro trata como alavanca e usa pra fazer o que antes não cabia no dia. O primeiro perde. E perde justamente pro segundo grupo.
 
-Então a pergunta certa é outra: você vai mandar na IA, ou vai disputar espaço com ela? Marca alguém que precisa ouvir isso.` },
+Então a pergunta certa é outra: você vai mandar na IA, ou vai disputar espaço com ela? Manda esse vídeo pra quem ainda está competindo com a máquina.` },
 
   { t: "Comece pelo cético", p: "reserva · ~45s", x:
 `O cético do time é o seu melhor aliado pra adotar IA. Sério.
